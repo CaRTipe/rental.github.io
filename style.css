@@ -1,0 +1,36 @@
+#signupbody {
+    gap: 200px;
+}
+#loginbody {
+    gap: 200px;
+}
+#checkbox a{
+ text-decoration: none;
+ color: rgb(51, 1, 38);  
+}
+.btn {
+    background-color: rgb(51, 1, 38);
+    color: white;
+    width: 420px;
+}
+.image img {
+    width: 72px;
+    height: 72px;
+}
+
+#create a{
+    text-decoration: none;
+    color: rgb(51, 1, 38);
+}
+#login a {
+    text-decoration: none;
+    color: rgb(51, 1, 38);
+}
+#login {
+    margin-top: 100px;
+}
+.card {
+    border: none;
+    display: flex;
+    justify-content: center;
+}
