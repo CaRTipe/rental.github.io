@@ -47,14 +47,14 @@
                         <input type="date" class="form-control" id="date" required>
                     </div>
 
-                    <div>
+                    <div class="button">
                         <button class="btn" type="submit">Sign up</button>
                     </div>
                 </form>
 
             </div>
             <div class="login mx-1" id="login">
-                <h1 class="h6">Already have an account? <a href="./index.php">Login</a></h1>
+                <h1 class="h6">Already have an account? <a href="./signin.php">Login</a></h1>
             </div>
         </div>
         <div>

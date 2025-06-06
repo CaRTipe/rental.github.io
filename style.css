@@ -1,3 +1,25 @@
+#brand img{
+    border-radius: 50%;
+}
+#sign button {
+    width: 200px;
+}
+#exp .card {
+    border: 2px solid #dddd;
+    height: 90px;
+    padding: 10px;
+}
+#select .card {
+    border: 1px solid grey;
+    position: relative;
+}
+
+#first, #second, #third, #fourth {
+    align-items: center;
+}
+#first, #second, #third, #fourth:hover {
+    cursor: pointer;
+}
 #signupbody {
     gap: 200px;
 }
@@ -8,7 +30,7 @@
  text-decoration: none;
  color: rgb(51, 1, 38);  
 }
-.btn {
+.button button {
     background-color: rgb(51, 1, 38);
     color: white;
     width: 420px;
