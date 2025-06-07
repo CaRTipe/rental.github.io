@@ -39,8 +39,9 @@
                 </ul>
             </div>
             <div>
-                <ul class="mt-3" id="sign">
+                <ul class="d-flex flex-row align-items-center mt-3" id="sign">
                     <li><a href="./signup.php"><button class="btn btn-secondary">Sign up</button></a></li>
+                    <li><a href="./signin.php"><button class="btn btn-primary">Sign in</button></a></li>
                 </ul>
             </div>
         </div>
@@ -83,7 +84,7 @@
             <img src="./assets/images/container.png" alt="" width="920px" height="814px">
         </div>
     </div>
-    <div class="d-flex flex-row align-items-center gap-3" id="select">
+    <div class="d-flex flex-row align-items-center gap-3 mb-5" id="select">
         <div class="card" style="width: 435px; height:250px;">
             <div class="d-flex flex-column justify-content-center" id="first">
                 <img src="./assets/images/dream.png" alt="" width="62px" height="62px">
@@ -108,7 +109,7 @@
                 </h1>
             </div>
         </div>
-        <div class="card" style="width:450px; height:250px;" >
+        <div class="card" style="width:450px; height:250px;">
             <div class="d-flex flex-column justify-content-center" id="fourth">
                 <img src="./assets/images/smart.png" alt="" width="62px" height="62px">
                 <h1 class="h5 mt-3">
@@ -116,6 +117,185 @@
                 </h1>
             </div>
         </div>
+    </div>
+    <div class="container" id="properties">
+        <div class="mb-5">
+            <img src="./assets/images/abstract.png" alt="" width="68.4px" height="30px">
+        </div>
+        <div>
+            <h1 class="h2 mb-4">
+                Featured Properties
+            </h1>
+        </div>
+        <div class="d-flex flex-row align-items-center mb-5 gap-5">
+            <p>
+                Explore our handpicked selection of properties. Each listing offers a glimpse into the exceptional houses and investments available through <br> Sustainable Houses.
+                Click "View Details" for more information
+            </p>
+            <button class="btn btn-secondary mb-3" style="width: 200px;">
+                View All Properties
+            </button>
+        </div>
+        <div class="d-flex flex-row align-items-center gap-5 mb-5">
+            <div class="card" style="width: 512px; height:692px;">
+                <div>
+                    <img src="./assets/images/seaside.png" alt="" width="440px" height="318px">
+                </div>
+                <div>
+                    <h1 class="h4 my-3">Seaside Serenity Villa</h1>
+                    <p class="my-3">A stunning 4-bedroom, 3-bathroom villa in a peaceful surbuban neighborhood.... <a href="#">Read more</a></p>
+                    <div class="d-flex flex-row align-items-center mb-3">
+                        <div class="card d-flex flex-row align-items-center gap-2" style="width: 155px; height: 43px;">
+                            <div>
+                                <img src="./assets/images/bedroom.png" alt="" width="24px" height="24px">
+                            </div>
+                            <div>
+                                <p>4-bedroom</p>
+                            </div>
+                        </div>
+                        <div class="card d-flex flex-row align-items-center gap-2" style="width: 155px; height: 43px;">
+                            <div>
+                                <img src="./assets/images/bathroom.png" alt="" width="24px" height="24px">
+                            </div>
+                            <div>
+                                <p>3-bathroom</p>
+                            </div>
+                        </div>
+                        <div class="card d-flex flex-row align-items-center gap-2" style="width: 155px; height: 43px;">
+                            <div>
+                                <img src="./assets/images/villa.png" alt="" width="24px" height="24px">
+                            </div>
+                            <div>
+                                <p>Villa</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between align-items-center mb-3">
+                        <div>
+                            <h1 class="h4" style="color: grey;">
+                                Price
+                            </h1>
+                            <h1 class="h3" style="color: #dddddd;">
+                                $550,000
+                            </h1>
+                        </div>
+                        <div>
+                            <button class="btn" style="background-color: purple; width: 190px; height: 40px; color: white;">
+                                View Property Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card" style="width: 512px; height:692px;">
+                <div>
+                    <img src="./assets/images/metropolitan.png" alt="" width="440px" height="318px">
+                </div>
+                <div>
+                    <h1 class="h4 my-3">Metropolitan Haven</h1>
+                    <p class="my-3">
+                        A chic and fully furnished 2-bedroom apartment with panoramic city views... <a href="#">Read more</a>
+                    </p>
+                    <div class="d-flex flex-row align-items-center mb-3">
+                        <div class="card d-flex flex-row align-items-center gap-2" style="width: 155px; height: 43px;">
+                            <div>
+                                <img src="./assets/images/bedroom.png" alt="" width="24px" height="24px">
+                            </div>
+                            <div>
+                                <p>2-bedroom</p>
+                            </div>
+                        </div>
+                        <div class="card d-flex flex-row align-items-center gap-2" style="width: 155px; height: 43px;">
+                            <div>
+                                <img src="./assets/images/bathroom.png" alt="" width="24px" height="24px">
+                            </div>
+                            <div>
+                                <p>2-bathroom</p>
+                            </div>
+                        </div>
+                        <div class="card d-flex flex-row align-items-center gap-2" style="width: 155px; height: 43px;">
+                            <div>
+                                <img src="./assets/images/villa.png" alt="" width="24px" height="24px">
+                            </div>
+                            <div>
+                                <p>Villa</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between align-items-center mb-3">
+                        <div>
+                            <h1 class="h4" style="color: grey;">
+                                Price
+                            </h1>
+                            <h1 class="h3" style="color: #dddddd;">
+                                $550,000
+                            </h1>
+                        </div>
+                        <div>
+                            <button class="btn" style="background-color: purple; width: 190px; height: 40px; color: white;">
+                                View Property Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 512px; height:692px;">
+                <div>
+                    <img src="./assets/images/rustic.png" alt="" width="440px" height="318px">
+                </div>
+                <div>
+                    <h1 class="h4 my-3">Rustic Retreat Cottage</h1>
+                    <p class="my-3">
+                        An elegant 3-bedroom, 2.5-bathroom townhouse in gated community... <a href="#">Read More</a>
+                    </p>
+                    <div class="d-flex flex-row align-items-center mb-3">
+                        <div class="card d-flex flex-row align-items-center gap-2" style="width: 155px; height: 43px;">
+                            <div>
+                                <img src="./assets/images/bedroom.png" alt="" width="24px" height="24px">
+                            </div>
+                            <div>
+                                <p>3-bedroom</p>
+                            </div>
+                        </div>
+                        <div class="card d-flex flex-row align-items-center gap-2" style="width: 155px; height: 43px;">
+                            <div>
+                                <img src="./assets/images/bathroom.png" alt="" width="24px" height="24px">
+                            </div>
+                            <div>
+                                <p>3-bathroom</p>
+                            </div>
+                        </div>
+                        <div class="card d-flex flex-row align-items-center gap-2" style="width: 155px; height: 43px;">
+                            <div>
+                                <img src="./assets/images/villa.png" alt="" width="24px" height="24px">
+                            </div>
+                            <div>
+                                <p>Villa</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between align-items-center mb-3">
+                        <div>
+                            <h1 class="h4" style="color: grey;">
+                                Price
+                            </h1>
+                            <h1 class="h3" style="color: #dddddd;">
+                                $550,000
+                            </h1>
+                        </div>
+                        <div>
+                            <button class="btn" style="background-color: purple; width: 190px; height: 40px; color: white;">
+                                View Property Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="reviews">
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

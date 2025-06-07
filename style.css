@@ -1,8 +1,8 @@
+* {
+    scroll-behavior: smooth;
+}
 #brand img{
     border-radius: 50%;
-}
-#sign button {
-    width: 200px;
 }
 #exp .card {
     border: 2px solid #dddd;
