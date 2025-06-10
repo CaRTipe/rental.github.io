@@ -37,11 +37,13 @@
                     </li>
                 </ul>
             </div>
-            <div>
-                <ul class="d-flex flex-row align-items-center mt-3" id="sign">
-                    <li><a href="./signup.php"><button class="btn btn-secondary">Sign up</button></a></li>
-                    <li><a href="./signin.php"><button class="btn btn-primary">Sign in</button></a></li>
-                </ul>
+            <div class="d-flex flex-row align-items-center gap-3">
+                <a href="./signin.php">
+                    <button class="btn btn-outline-secondary" style="width: 120px; height: 40px;">Login</button>
+                </a>
+                <a href="./signup.php">
+                    <button class="btn btn-secondary" style="width: 120px; height: 40px;">Sign Up</button>
+                </a>
             </div>
         </div>
     </nav>
@@ -294,7 +296,265 @@
         </div>
     </div>
     <div class="container" id="reviews">
+        <div class="mb-5">
+            <img src="./assets/images/abstract.png" alt="" width="68.4px" height="30px">
+        </div>
+        <div>
+            <div>
+                <h1 class="h2 mb-4">What Our Clients Say</h1>
+            </div>
+            <div class="d-flex flex-row align-items-center mb-5 gap-5">
+                <p>
+                    Read the success stories and heartlight testimonials from our valued clients. Discover why they trust Sustainable Houses for their real estate needs.
+                </p>
+                <button class="btn btn-secondary mb-3" style="width: 200px;">
+                    View All Testimonials
+                </button>
+            </div>
+        </div>
+        <div class="d-flex flex-row align-items-center gap-5 mb-5">
+            <div class="card" style="width: 512px; height: 442px;">
+                <div class="d-flex flex-row align-items-center gap-3 mb-3">
+                    <div>
+                        <img src="./assets/images/star.png" alt="" width="44px" height="44px">
+                    </div>
+                    <div>
+                        <img src="./assets/images/star.png" alt="" width="44px" height="44px">
+                    </div>
+                    <div>
+                        <img src="./assets/images/star.png" alt="" width="44px" height="44px">
+                    </div>
+                    <div>
+                        <img src="./assets/images/star.png" alt="" width="44px" height="44px">
+                    </div>
+                    <div>
+                        <img src="./assets/images/star.png" alt="" width="44px" height="44px">
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <h1 class="h3 mb-3">Exceptional Service!</h1>
+                    <p class="mb-3">
+                        Our experience with sustainable houses was outstanding. Their team's dedication and professionalism made finding our dream home a breeze.
+                        Highly recommended
+                    </p>
+                </div>
+                <div class="d-flex flex-row  gap-3">
+                    <div>
+                        <img src="./assets/images/wade.png" alt="" width="60px" height="60px">
+                    </div>
+                    <div>
+                        <h1 class="h5">Wade Wilson</h1>
+                        <p class="mb-3" style="color: grey;">USA, Carlifonia</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 512px; height: 442px;">
+                <div class="d-flex flex-row align-items-center gap-3 mb-3">
+                    <div>
+                        <img src="./assets/images/star.png" alt="" width="44px" height="44px">
+                    </div>
+                    <div>
+                        <img src="./assets/images/star.png" alt="" width="44px" height="44px">
+                    </div>
+                    <div>
+                        <img src="./assets/images/star.png" alt="" width="44px" height="44px">
+                    </div>
+                    <div>
+                        <img src="./assets/images/star.png" alt="" width="44px" height="44px">
+                    </div>
+                    <div>
+                        <img src="./assets/images/star.png" alt="" width="44px" height="44px">
+                    </div>
+                </div>
+                <div class="mb-5 mt-1">
+                    <h1 class="h3 mb-3">Efficient And Reliable</h1>
+                    <p class="mb-3">
+                        Sustainable houses provided us with top-notch service. They helped us sell our property quickly and at a great price.
+                        We couldn't be happier with the results.
+                    </p>
+                </div>
+                <div class="d-flex flex-row  gap-3">
+                    <div>
+                        <img src="./assets/images/emelie.png" alt="" width="60px" height="60px">
+                    </div>
+                    <div>
+                        <h1 class="h5">Emelie Thomson
+                            <p class="mb-3" style="color: grey;">USA, Florida</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 512px; height: 442px;">
+                <div class="d-flex flex-row align-items-center gap-3 mb-3">
+                    <div>
+                        <img src="./assets/images/star.png" alt="" width="44px" height="44px">
+                    </div>
+                    <div>
+                        <img src="./assets/images/star.png" alt="" width="44px" height="44px">
+                    </div>
+                    <div>
+                        <img src="./assets/images/star.png" alt="" width="44px" height="44px">
+                    </div>
+                    <div>
+                        <img src="./assets/images/star.png" alt="" width="44px" height="44px">
+                    </div>
+                    <div>
+                        <img src="./assets/images/star.png" alt="" width="44px" height="44px">
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <h1 class="h3 mb-3">Trusted Advisors</h1>
+                    <p class="mb-3">
+                        The sustainable houses team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive.
+                        Thank you for your support!
+                    </p>
+                </div>
+                <div class="d-flex flex-row  gap-3">
+                    <div>
+                        <img src="./assets/images/john.png" alt="" width="60px" height="60px">
+                    </div>
+                    <div>
+                        <h1 class="h5">John Mans</h1>
+                        <p class="mb-3" style="color: grey;">USA, Nevada</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="faq">
+        <div class="mb-5">
+            <img src="./assets/images/abstract.png" alt="" width="68.4px" height="30px">
+        </div>
+        <div>
+            <h1 class="h2 mb-4">Frequently Asked Questions</h1>
+        </div>
+        <div class="d-flex flex-row align-items-center mb-5 gap-5">
+            <p>
+                Have questions? We've got answers! Explore our FAQ section to find the information you need about our services, properties, and more.
+            </p>
+            <button class="btn btn-secondary mb-3" style="width: 200px;">
+                View All FAQs
+            </button>
+        </div>
+        <div class="d-flex flex-row align-items-center gap-5 mb-5">
+            <div class="card" style="width: 512px; height:326px;">
+                <div>
+                    <h1 class="h4 mb-3">How do I search for properties on Sustainable homes?</h1>
+                    <p class="h6" style="color: grey;">
+                        Learn how to use our user-friendly search tools to find properties that match your criteria.
+                    </p>
+                    <button class="btn btn-secondary mt-3" style="width: 200px; height: 40px;">
+                        Read More
+                    </button>
+                </div>
+            </div>
+            <div class="card" style="width: 512px; height:326px;">
+                <div>
+                    <h1 class="h4 mb-3">What documents do i need to sell my property through Sustainable homes?</h1>
+                    <p class="h6" style="color: grey;">
+                        Find about the necessary documents and paperwork required to sell your property with us.
+                    </p>
+                    <button class="btn btn-secondary mt-3" style="width: 200px; height: 40px;">
+                        Read More
+                    </button>
+                </div>
+            </div>
+            <div class="card" style="width: 512px; height:326px;">
+                <div>
+                    <h1 class="h4 mb-3">How can I contact a Sustainable Houses agent?</h1>
+                    <p class="h6" style="color: grey;">
+                        Discover the ways to get in touch with our experienced agents for personalized assistance and support.
+                    </p>
+                    <button class="btn btn-secondary mt-3" style="width: 200px; height: 40px;">
+                        Read More
+                    </button>
+                </div>
+            </div>
+        </div>
 
+
+
+    </div>
+    <div class="conatiner d-flex flex-row align-items-center justify-content-around gap-5 mb-5" id="explore">
+        <div>
+            <h1 class="h2 my-3">Start Your Real Estate journey Today</h1>
+            <p>
+                Your dream property is just a click away. Whether you're looking for a new home, a strategic investment, or expert real estate advice. Sustainable houses <br> is here
+                to assist you every step of the way. Take the first step towards your real estate goals and explore our <br> available properties or get in touch with our team for personalized assistance.
+            </p>
+        </div>
+        <button class="btn" style="background-color: purple;">
+            Explore Properties
+        </button>
+    </div>
+    <div class="container-fluid d-flex flex-row align-items-center justify-content-around gap-5" id="bfooter" style="background-color: rgb(32, 32, 32);">
+        <div>
+            <div class="d-flex flex-row align-items-center gap-2">
+                <img src="./assets/images/house.png" alt="" width="48px" height="48px">
+                <h1 class="h3">Sustainable Houses</h1>
+            </div>
+            <div class="d-flex flex-row align-items-center gap-3 mt-5">
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                <button class="btn btn-secondary" type="submit">Submit</button>
+            </div>
+        </div>
+        <div class="d-flex flex-row align-items-start justify-content-between gap-5" id="quicklinks">
+            <div>
+                <h1 class="h4 mb-5" style="color: grey;">Home</h1>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li class="mb-3">Hero Section</li>
+                    <li class="mb-3">Features</li>
+                    <li class="mb-3">Properties</li>
+                    <li class="mb-3">Testimonials</li>
+                    <li class="mb-3">FAQs</li>
+                </ul>
+            </div>
+            <div>
+                <h1 class="h4 mb-5" style="color: grey;">About us</h1>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li class="mb-3">Our Story</li>
+                    <li class="mb-3">Our Works</li>
+                    <li class="mb-3">How it Works</li>
+                    <li class="mb-3">Our Team</li>
+                    <li class="mb-3">Our Clients</li>
+                </ul>
+            </div>
+            <div>
+                <h1 class="h4 mb-5" style="color: grey;">Properties</h1>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li class="mb-3">Portfolio</li>
+                    <li class="mb-3">Categories</li>
+                </ul>
+            </div>
+            <div>
+                <h1 class="h4 mb-5" style="color: grey;">Services</h1>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li class="mb-3">Valuation Mastery</li>
+                    <li class="mb-3">Strategic Marketing</li>
+                    <li class="mb-3">Negotiation Wizardry</li>
+                    <li class="mb-3">Closing Success</li>
+                    <li class="mb-3">Property Management</li>
+                </ul>
+            </div>
+            <div>
+                <h1 class="h4 mb-5" style="color: grey;">Contact us</h1>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li class="mb-3">Contact Form</li>
+                    <li class="mb-3">Our Offices</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid d-flex flex-row justify-content-around align-items-center" id="footer" style="height: 104px;">
+        <div class="d-flex flex-row align-items-center gap-5">
+            <h1 class="h6">@2025 Sustainable Houses.All Rights Reserved.</h1>
+            <h1 class="h6">Terms And Conditions</h1>
+        </div>
+        <div class="d-flex flex-row align-items-center gap-4">
+            <img src="./assets/images/facebook.png" alt="facebook" width="52px" height="52px">
+            <img src="./assets/images/linkedin.png" alt="linked in" width="52px" height="52px">
+            <img src="./assets/images/twitter.png" alt="X" width="52px" height="52px">
+            <img src="./assets/images/youtube.png" alt="youtube" width="52px" height="52px">
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
