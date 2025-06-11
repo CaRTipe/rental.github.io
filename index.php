@@ -22,7 +22,7 @@
             <div class="collapse navbar-collapse mx-5" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item mx-4">
-                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" aria-current="page" href="./index.php">Home</a>
                     </li>
                     <li class="nav-item mx-4">
                         <a class="nav-link" href="#">About us</a>
