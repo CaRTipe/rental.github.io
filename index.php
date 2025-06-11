@@ -138,7 +138,7 @@
             </button>
         </div>
         <div class="d-flex flex-row align-items-center gap-5 mb-5">
-            <div class="card" style="width: 512px; height:692px;">
+            <div class="card" style="width: 600px; height:692px;">
                 <div>
                     <img src="./assets/images/seaside.png" alt="" width="440px" height="318px">
                 </div>
@@ -189,7 +189,7 @@
                 </div>
 
             </div>
-            <div class="card" style="width: 512px; height:692px;">
+            <div class="card" style="width: 600px; height:692px;">
                 <div>
                     <img src="./assets/images/metropolitan.png" alt="" width="440px" height="318px">
                 </div>
@@ -241,7 +241,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card" style="width: 512px; height:692px;">
+            <div class="card" style="width: 600px; height:692px;">
                 <div>
                     <img src="./assets/images/rustic.png" alt="" width="440px" height="318px">
                 </div>
@@ -501,45 +501,45 @@
             <div>
                 <h1 class="h4 mb-5" style="color: grey;">Home</h1>
                 <ul style="list-style-type: none; padding: 0;">
-                    <li class="mb-3">Hero Section</li>
-                    <li class="mb-3">Features</li>
-                    <li class="mb-3">Properties</li>
-                    <li class="mb-3">Testimonials</li>
-                    <li class="mb-3">FAQs</li>
+                    <li class="mb-3"><a href="#">Hero Section</a></li>
+                    <li class="mb-3"><a href="#">Features</a></li>
+                    <li class="mb-3"><a href="#properties">Properties</a></li>
+                    <li class="mb-3"><a href="#reviews">Testimonials</a></li>
+                    <li class="mb-3"><a href="#faq">FAQs</a></li>
                 </ul>
             </div>
             <div>
                 <h1 class="h4 mb-5" style="color: grey;">About us</h1>
                 <ul style="list-style-type: none; padding: 0;">
-                    <li class="mb-3">Our Story</li>
-                    <li class="mb-3">Our Works</li>
-                    <li class="mb-3">How it Works</li>
-                    <li class="mb-3">Our Team</li>
-                    <li class="mb-3">Our Clients</li>
+                    <li class="mb-3"><a href="#">Our Story</a></li>
+                    <li class="mb-3"><a href="#">Our Works</a></li>
+                    <li class="mb-3"><a href="#">How it Works</a></li>
+                    <li class="mb-3"><a href="#">Our Team</a></li>
+                    <li class="mb-3"><a href="#">Our Clients</a></li>
                 </ul>
             </div>
             <div>
                 <h1 class="h4 mb-5" style="color: grey;">Properties</h1>
                 <ul style="list-style-type: none; padding: 0;">
-                    <li class="mb-3">Portfolio</li>
-                    <li class="mb-3">Categories</li>
+                    <li class="mb-3"><a href="#">Portfolio</a></li>
+                    <li class="mb-3"><a href="#">Categories</a></li>
                 </ul>
             </div>
             <div>
                 <h1 class="h4 mb-5" style="color: grey;">Services</h1>
                 <ul style="list-style-type: none; padding: 0;">
-                    <li class="mb-3">Valuation Mastery</li>
-                    <li class="mb-3">Strategic Marketing</li>
-                    <li class="mb-3">Negotiation Wizardry</li>
-                    <li class="mb-3">Closing Success</li>
-                    <li class="mb-3">Property Management</li>
+                    <li class="mb-3"><a href="#">Valuation Mastery</a></li>
+                    <li class="mb-3"><a href="#">Strategic Marketing</a></li>
+                    <li class="mb-3"><a href="#">Negotiation Wizardry</a></li>
+                    <li class="mb-3"><a href="#">Closing Success</a></li>
+                    <li class="mb-3"><a href="#">Property Management</a></li>
                 </ul>
             </div>
             <div>
                 <h1 class="h4 mb-5" style="color: grey;">Contact us</h1>
                 <ul style="list-style-type: none; padding: 0;">
-                    <li class="mb-3">Contact Form</li>
-                    <li class="mb-3">Our Offices</li>
+                    <li class="mb-3"><a href="#">Contact Form</a></li>
+                    <li class="mb-3"><a href="#">Our Offices</a></li>
                 </ul>
             </div>
         </div>

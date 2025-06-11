@@ -1,6 +1,13 @@
 * {
     scroll-behavior: smooth;
 }
+a {
+    text-decoration: none;
+    color: rgb(238, 228, 228);
+}
+a:hover {
+ cursor: pointer;
+}
 #brand img{
     border-radius: 50%;
 }
@@ -29,6 +36,16 @@
 #checkbox a{
  text-decoration: none;
  color: rgb(51, 1, 38);  
+}
+#faq .card {
+    border: 1px solid rgb(56, 56, 56);
+    border-radius: 10px;
+    padding: 20px;
+}
+#reviews .card {
+    border: 1px solid rgb(56, 56, 56);
+    border-radius: 10px;
+    padding: 20px;
 }
 .button button {
     background-color: rgb(51, 1, 38);
