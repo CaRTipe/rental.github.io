@@ -1,0 +1,49 @@
+<?php
+session_start();
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "sustainablehouses";
+
+// Create Connection
+$conn = new mysqli($servername, $username, $password, $database);
+// Check Connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
+
+$sql = "SELECT * FROM clients";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    // Output data of each row
+    while($row = $result->fetch_all(MYSQLI_ASSOC)) {
+        $_SESSION['clients'][] = $row;
+    }
+}
+
+
+function addClients($name, $email, $phone, $password, $date_of_birth) {
+    global $conn;
+    $query = "INSERT INTO clients (name, email, phone, password, date_of_birth) VALUES ('$name', '$email', '$phone', '$password', '$date_of_birth')";
+    if ($conn->query($query) == TRUE) {
+        return true;
+    } else {
+        echo "Error: " . $query . "<br>" . $conn->error;
+    }
+}
+function logClient($email, $password) {
+    global $conn;
+    $logQuery = "SELECT * FROM clients WHERE email='$email' AND password='$password'";
+    $result = $conn->query($logQuery);
+    if ($result->num_rows > 0) {
+        $_SESSION['login'] = TRUE;
+    }
+    else {
+        echo "Invalid email or password!";
+        return false;
+    }
+}
+
+?>

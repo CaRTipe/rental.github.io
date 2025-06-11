@@ -1,3 +1,6 @@
+<?php
+include "./server/dbconfigs.php"
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,34 +61,39 @@
                     <p>Track your house payments</p>
                 </div>
 
-                <form action="">
+                <form action="./server/processing.php" method="post">
                     <div class="d-flex flex-row align-items-center gap-3">
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="mail@abc.com" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="mail@abc.com" required>
                         </div>
                         <div class="mb-3">
-                            <label for="phone" class="form-label">Phone Number</label>
-                            <input type="number" class="form-control" id="phone">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required>
                         </div>
                     </div>
                     <div class="d-flex flex-row align-items-center gap-3">
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="............." required>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="............." required>
                         </div>
                         <div class="mb-3">
                             <label for="password2" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control" id="password2" placeholder="............" required>
+                            <input type="password" class="form-control" id="password2" name="password2" placeholder="............" required>
                         </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="+254 700 000 000" required>
                     </div>
                     <div class="mb-5">
                         <label for="date" class="form-label">Date of Birth</label>
-                        <input type="date" class="form-control" id="date" required>
+                        <input type="date" class="form-control" id="date" name="date" required>
                     </div>
 
+
                     <div class="button">
-                        <button class="btn" type="submit">Sign up</button>
+                        <button class="btn" type="submit" name="add_clients">Sign up</button>
                     </div>
                 </form>
 
