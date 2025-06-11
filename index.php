@@ -1,3 +1,6 @@
+<?php
+include "filemanager.php";
+?>
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 
@@ -47,7 +50,7 @@
             </div>
         </div>
     </nav>
-    <div class="d-flex flex-row align-items-center">
+    <div class="container-fluid d-flex flex-row align-items-center">
         <div class="card mx-5 mt-2" style="width: 920px; height: 814px;">
             <div class="mb-4">
                 <h1 class="mb-5">
@@ -82,11 +85,11 @@
             </div>
         </div>
         <div>
-            <img src="./assets/images/container.png" alt="" width="920px" height="814px">
+            <img src="./assets/images/container.png" alt="" width="600px" height="600px">
         </div>
     </div>
-    <div class="d-flex flex-row align-items-center gap-3 mb-5" id="select">
-        <div class="card" style="width: 435px; height:250px;">
+    <div class=" container-fluid d-flex flex-row align-items-center gap-2 mb-5" id="select">
+        <div class="card" style="width: 380px; height:250px; margin-left: 58px;">
             <div class="d-flex flex-column justify-content-center" id="first">
                 <img src="./assets/images/dream.png" alt="" width="62px" height="62px">
                 <h1 class="h5 mt-3">
@@ -94,7 +97,7 @@
                 </h1>
             </div>
         </div>
-        <div class="card" style="width:450px; height:250px;">
+        <div class="card" style="width:380px; height:250px;">
             <div class="d-flex flex-column justify-content-center" id="second">
                 <img src="./assets/images/unlock.png" alt="" width="62px" height="62px">
                 <h1 class="h5 mt-3">
@@ -102,7 +105,7 @@
                 </h1>
             </div>
         </div>
-        <div class="card" style="width:450px; height:250px;">
+        <div class="card" style="width:380px; height:250px;">
             <div class="d-flex flex-column justify-content-center" id="third">
                 <img src="./assets/images/effort.png" alt="" width="62px" height="62px">
                 <h1 class="h5 mt-3">
@@ -110,7 +113,7 @@
                 </h1>
             </div>
         </div>
-        <div class="card" style="width:450px; height:250px;">
+        <div class="card" style="width:380px; height:250px;">
             <div class="d-flex flex-column justify-content-center" id="fourth">
                 <img src="./assets/images/smart.png" alt="" width="62px" height="62px">
                 <h1 class="h5 mt-3">
@@ -119,7 +122,7 @@
             </div>
         </div>
     </div>
-    <div class="container" id="properties">
+    <div class="container-fluid" id="properties">
         <div class="mb-5">
             <img src="./assets/images/abstract.png" alt="" width="68.4px" height="30px">
         </div>
@@ -128,7 +131,7 @@
                 Featured Properties
             </h1>
         </div>
-        <div class="d-flex flex-row align-items-center mb-5 gap-5">
+        <div class="d-flex flex-row align-items-center mb-5 " style="gap: 350px;">
             <p>
                 Explore our handpicked selection of properties. Each listing offers a glimpse into the exceptional houses and investments available through <br> Sustainable Houses.
                 Click "View Details" for more information
@@ -137,7 +140,73 @@
                 View All Properties
             </button>
         </div>
-        <div class="d-flex flex-row align-items-center gap-5 mb-5">
+
+        <?php
+        if (isset($houses)) {
+            echo "<div class='row mb-5' style='margin-left: 130px;'>";
+
+            foreach ($houses as $house) {
+                echo "
+                    <div class='card col-md-4 mb-4'>
+                        <div class='w-100'>
+                            <img style='width:100%' src='./assets/images/seaside.png' alt=''>
+                        </div>
+                        <div>
+                            <h1 class='h4 my-3'>{$house['name']}</h1>
+                            <p class='my-3'>
+                                {$house['description']} <a href='#'>Read more</a>
+                            </p>
+                            <div class='d-flex flex-row align-items-center mb-3'>
+                                <div class='card d-flex flex-row align-items-center gap-2' style='width: 155px; height: 43px;'>
+                                    <div>
+                                        <img src='./assets/images/bedroom.png' alt='' width='24px' height='24px'>
+                                    </div>
+                                    <div>
+                                        <p>{$house['bedroom']}-bedroom</p>
+                                    </div>
+                                </div>
+                                <div class='card d-flex flex-row align-items-center gap-2' style='width: 155px; height: 43px;'>
+                                    <div>
+                                        <img src='./assets/images/bathroom.png' alt='' width='24px' height='24px'>
+                                    </div>
+                                    <div>
+                                        <p>{$house['bathroom']}-bathroom</p>
+                                    </div>
+                                </div>
+                                <div class='card d-flex flex-row align-items-center gap-2' style='width: 155px; height: 43px;'>
+                                    <div>
+                                        <img src='./assets/images/villa.png' alt='' width='24px' height='24px'>
+                                    </div>
+                                    <div>
+                                        <p>Villa</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class='d-flex flex-row justify-content-between align-items-center mb-3'>
+                                <div>
+                                    <h1 class='h4' style='color: grey;'>
+                                        Price
+                                    </h1>
+                                    <h1 class='h3' style='color: #dddddd;'>
+                                        {$house['price']}
+                                    </h1>
+                                </div>
+                                <div>
+                                    <button class='btn' style='background-color: purple; width: 190px; height: 40px; color: white;'>
+                                        View Property Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ";
+            }
+            echo "</div>";
+        }
+        ?>
+    </div>
+    <!-- <div class="d-flex flex-row align-items-center gap-5 mb-5">
             <div class="card" style="width: 600px; height:692px;">
                 <div>
                     <img src="./assets/images/seaside.png" alt="" width="440px" height="318px">
@@ -293,7 +362,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="container" id="reviews">
         <div class="mb-5">

@@ -22,6 +22,14 @@ if ($result->num_rows > 0) {
         $_SESSION['clients'][] = $row;
     }
 }
+$sql = "SELECT * FROM houses";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    // Output data of each row
+    while($row = $result->fetch_all(MYSQLI_ASSOC)) {
+        $_SESSION['houses'][] = $row;
+    }
+}
 
 
 function addClients($name, $email, $phone, $password, $date_of_birth) {
@@ -45,5 +53,6 @@ function logClient($email, $password) {
         return false;
     }
 }
+
 
 ?>
