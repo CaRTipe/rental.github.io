@@ -149,7 +149,7 @@ include "filemanager.php";
                 echo "
                     <div class='card col-md-4 mb-4'>
                         <div class='w-100'>
-                            <img style='width:100%' src='./assets/images/seaside.png' alt=''>
+                            <img style='width:100%' src='./uploads/{$house['image']}' alt=''>
                         </div>
                         <div>
                             <h1 class='h4 my-3'>{$house['name']}</h1>

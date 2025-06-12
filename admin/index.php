@@ -32,6 +32,7 @@ include "filemanager.php";
                     <th>Bedrooms</th>
                     <th>Bathrooms</th>
                     <th>Price</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -45,6 +46,10 @@ include "filemanager.php";
                         echo "<td>" . htmlspecialchars(($house['bedroom'])) . " Bedrooms </td>";
                         echo "<td>" . htmlspecialchars(($house['bathroom'])) . " Bathrooms </td>";
                         echo "<td>" . htmlspecialchars($house['price']) . "</td>";
+                        echo "<td>" . 
+                         "<a href='edit.php?house_id={$house['house_id']}' class='btn'><img src='./assets/images/edit.png' alt='Edit' width='20px' height='20px'></a>" .
+                         "<a href='#' class='btn'><img src='./assets/images/delete.png' alt='Delete' width='20px' height='20px'></a>" .
+                         "</td>";
                         echo "</tr>";
                     }
                 } else {
@@ -61,7 +66,7 @@ include "filemanager.php";
                     <h1 class="modal-title fs-5">Add houses</h1>
                 </div>
                 <div class="modal-body">
-                    <form action="./processing.php" method="post">
+                    <form action="./processing.php" method="post" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
                             <input type="text" class="form-control" name="name" id="name" required>
@@ -79,6 +84,10 @@ include "filemanager.php";
                         <div class="mb-3">
                             <label for="price" class="form-label">Price</label>
                             <input type="text" class="form-control" name="price" id="price" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Upload image</label>
+                            <input class="form-control" type="file" id="formFile" name="image" required>
                         </div>
                         <button type="submit" class="btn btn-secondary" name="add_house">Add House</button>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

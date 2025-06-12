@@ -11,9 +11,9 @@ if ($result->num_rows > 0) {
 }
 
 // add new house
-function addHouse($name, $description, $price, $bedroom, $bathroom) {
+function addHouse($name, $description, $price, $bedroom, $bathroom, $image) {
     global $conn;
-    $query = "INSERT INTO houses (name, description, price) VALUES ('$name', '$description', '$bedroom', '$bathroom' '$price')";
+    $query = "INSERT INTO houses (name, description, price, bedroom, bathroom, image) VALUES ('$name', '$description', '$price', '$bedroom', '$bathroom', '$image')";
     if ($conn->query($query) === TRUE) {
         return true;
     } else {
@@ -21,4 +21,48 @@ function addHouse($name, $description, $price, $bedroom, $bathroom) {
         return false;
     }
 }
+function getHouse($houseid) {
+    global $conn;
+    
+    // Use prepared statement to prevent SQL injection
+    $stmt = $conn->prepare("SELECT * FROM houses WHERE house_id = ?");
+    $stmt->bind_param("i", $houseid); // assuming $houseid is an integer
+
+    if ($stmt->execute()) {
+        $result = $stmt->get_result();
+        if ($result->num_rows > 0) {
+            // Fetch the row and return house_id
+            $row = $result->fetch_assoc();
+            return $row;
+        } else {
+            return false; // No such house found
+        }
+    } else {
+        return false; // Query execution failed
+    }
+}
+
+function updateHouse($id, $name, $description, $price, $bedroom, $bathroom, $image = null) {
+    global $conn;
+
+    if (isset($image) && !empty($image)) {
+        // Update including image
+        $sql = "UPDATE houses SET name = ?, description = ?, price = ?, bedroom = ?, bathroom = ?, image = ? WHERE house_id = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("sssiisi", $name, $description, $price, $bedroom, $bathroom, $image, $id);
+    } else {
+        // Update without image
+        $sql = "UPDATE houses SET name = ?, description = ?, price = ?, bedroom = ?, bathroom = ? WHERE house_id = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("sssiii", $name, $description, $price, $bedroom, $bathroom, $id);
+    }
+
+    if ($stmt->execute()) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
 ?>
