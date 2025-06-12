@@ -37,13 +37,7 @@ a:hover {
  text-decoration: none;
  color: rgb(51, 1, 38);  
 }
-#properties {
-    margin-left: 68px;
-    margin-right: 68px;
-}
 #properties .card {
-    
-    margin-left: 68px;;
     padding: 20px;
 }
 #faq .card {
@@ -55,6 +49,7 @@ a:hover {
     border: 1px solid rgb(56, 56, 56);
     border-radius: 10px;
     padding: 20px;
+    
 }
 #explore {
     background-color: rgb(32,32,32);
