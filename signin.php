@@ -84,7 +84,7 @@ include "./server/dbconfigs.php";
                         </div>
                     </div>
                     <div class="button">
-                        <button class="btn" type="submit">Login</button>
+                        <button class="btn" type="submit" name="log_clients">Login</button>
                     </div>
                 </form>
             </div>
