@@ -33,13 +33,13 @@ include "filemanager.php";
                         </li>
 
                         <li class="nav-item mx-4">
-                            <a class="nav-link" href="#">Clients</a>
+                            <a class="nav-link" href="clients.php">Clients</a>
                         </li>
                     </ul>
                 </div>
                 <div>
                     <?php
-                    if (isset($_SESSION['login1']) && $_SESSION['login1']): ?>
+                    if (isset($_SESSION['login']) && $_SESSION['login']): ?>
                         <a href="../logout.php"><button class="btn btn-secondary" style="width: 200px; height: 50px;">Log out</button></a>
                     <?php
                     endif; ?>
@@ -138,16 +138,36 @@ include "filemanager.php";
                 </div>
                 <div class="modal-body">
                     <form action="./processing.php" method="post" enctype="multipart/form-data">
-                        <div class="mb-3">
-                            <label for="house" class="form-label">House ID</label>
-                            <input type="number" class="form-control" name="house" id="house" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">Client ID</span>
-                            <input type="number" class="form-control" name="bedroom" id="client" required>
-                            <span class="input-group-text">Agent ID</span>
-                            <input type="number" class="form-control" name="bathroom" id="agent" required>
-                        </div>
+                        <select class="form-select mb-4" id="houses" name="houses">
+                            <option value="" selected disabled>Select House</option>
+                            <?php
+                            if(!empty($houses)) {
+                                foreach ($houses as $house) {
+                                    echo "<option value = '" . htmlspecialchars($house['house_id']) ."'>" . htmlspecialchars($house['name']) . "</option>";
+                                }
+                            }
+                            ?>
+                        </select>
+                        <select class="form-select mb-4" id="client" name="client">
+                            <option value="" selected disabled>Select Client</option>
+                            <?php
+                            if(!empty($clients)) {
+                                foreach ($clients as $client) {
+                                    echo "<option value = '" . htmlspecialchars($client['id']) . "'>" . htmlspecialchars($client['name']) . "</option>";
+                                }
+                            } 
+                            ?>
+                        </select>
+                        <select class="form-select mb-4" name="agent" id="agent">
+                            <option value="" selected disabled>Select Agent</option>
+                            <?php
+                            if (!empty($agents)) {
+                                foreach ($agents as $agent) {
+                                    echo "<option value='" . htmlspecialchars($agent['agent_id']) . "'>" . htmlspecialchars($agent['agent_name']) . "</option>";
+                                }
+                            } 
+                            ?>
+                        </select>
                         <button type="submit" class="btn btn-secondary" name="assign">Assign</button>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </form>

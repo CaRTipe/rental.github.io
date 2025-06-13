@@ -105,4 +105,26 @@ if (isset($_POST['update'])) {
     } else {
         echo "All fields are required.";
     }
-}
+} else if(isset($_POST['assign'])) {
+    if(isset($_POST['houses']) && $_POST['client'] && $_POST['agent']) {
+        $clientid = $_POST['client'];
+        $houseid = $_POST['houses'];
+        $agentid = $_POST['agent'];
+
+        echo $clientid;
+        echo $houseid;
+        echo $agentid;
+
+
+        if (assignHouses($clientid, $houseid, $agentid)) {
+            header("Location: ../admin/index.php?success=House assigned successfully");
+            exit();
+        } else {
+            echo "Error assigning house.";
+        }
+    } else {
+        echo "All fields are required.";
+    }
+
+    }
+

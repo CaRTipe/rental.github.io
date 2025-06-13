@@ -1,9 +1,9 @@
 <?php
 include "../server/dbconfigs.php";
 
-if (!isset($_SESSION['login1'])) {
+if (!isset($_SESSION['login']) && $_SESSION['login']) {
   header("Location: ../signin.php");
- }
+}
 
 // get all houses
 $sql = "SELECT * FROM houses";
@@ -19,6 +19,20 @@ if ($result->num_rows > 0) {
     $agents = $result->fetch_all(MYSQLI_ASSOC);
 } else {
     $agents = [];
+}
+$sql = "SELECT * FROM clients";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    $clients = $result->fetch_all(MYSQLI_ASSOC);
+} else {
+    $clients = [];
+}
+$sql = "SELECT * FROM house_allocation";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    $allocation = $result->fetch_all(MYSQLI_ASSOC);
+} else {
+    $allocation = [];
 }
 
 // add new house
@@ -73,6 +87,19 @@ function updateHouse($id, $name, $description, $price, $bedroom, $bathroom, $ima
     } else {
         return false;
     }
+}
+function assignHouses($clientid, $houseid, $agentid) {
+    global $conn;
+
+
+    $assign = "INSERT into house_allocation (client_id, house_id, agent_id) values ('$clientid', '$houseid', '$agentid')";
+    if ($conn->query($assign) === TRUE) {
+        return true;
+    } else {
+        echo "Error: " . $assign . "<br>" . $conn->error;
+        return false;
+    }
+
 }
 
 

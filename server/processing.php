@@ -39,7 +39,7 @@ if(isset($_POST['add_clients'])) {
         $emailaddress = htmlspecialchars($_POST['mail']);
         $password = htmlspecialchars($_POST['code']);
         logAgent($emailaddress, $password);
-        if(isset($_SESSION['login1']) && $_SESSION['login1'] == TRUE) {
+        if(isset($_SESSION['login']) && $_SESSION['login'] == TRUE) {
             header("Location: ../admin/index.php");
             exit();
         } else {

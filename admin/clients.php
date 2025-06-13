@@ -1,5 +1,5 @@
 <?php
-include "filemanager.php";
+include "filemanager.php" 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +7,7 @@ include "filemanager.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agents</title>
+    <title>Clients</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -46,29 +46,38 @@ include "filemanager.php";
                 </div>
         </nav>
     </nav>
-    <div class="container mt-5">
+
+    <div class="container" id="client_table">
         <table class="table">
             <tr>
-                <th>Agent Name</th>
+                <th>Name</th>
                 <th>Email Address</th>
-                <th>Years of Experience</th>
+                <th>Phone</th>
+                <th>Date of Birth</th>
             </tr>
             <?php
-            if (isset($agents)) {
-                foreach ($agents as $agent) {
+            if (isset($clients)) {
+                foreach ($clients as $client) {
                     echo "<tr>";
-                    echo "<td style='padding=2px;'>" . htmlspecialchars($agent['agent_name']) . "</td>";
-                    echo "<td>" . htmlspecialchars($agent['email_address']) . "</td>";
-                    echo "<td>" . htmlspecialchars($agent['years_of_exp']) . "</td>";
+                    echo "<td>" . htmlspecialchars($client['name']) . "</td>";
+                    echo "<td>" . htmlspecialchars($client['email']) . "</td>";
+                    echo "<td>" . htmlspecialchars($client['phone']) . "</td>";
+                    echo "<td>" . htmlspecialchars($client['date_of_birth']) . "</td>";
                     echo "</tr>";
-                }
-            } else {
-                echo "<tr><td colspan='3'>No Agent Available</td></td>";
-            }
 
+                }
+            }  else {
+                echo "<tr><td colspan='3'>No Clients Available</td></tr>";
+            }
             ?>
         </table>
+
     </div>
+
+
+
+
+
 
 
 
