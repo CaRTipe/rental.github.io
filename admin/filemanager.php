@@ -1,6 +1,10 @@
 <?php
 include "../server/dbconfigs.php";
 
+if (!isset($_SESSION['login1'])) {
+  header("Location: ../signin.php");
+ }
+
 // get all houses
 $sql = "SELECT * FROM houses";
 $result = $conn->query($sql);
@@ -8,6 +12,13 @@ if ($result->num_rows > 0) {
     $houses = $result->fetch_all(MYSQLI_ASSOC);
 } else {
     $houses = [];
+}
+$sql = "SELECT * FROM agents";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    $agents = $result->fetch_all(MYSQLI_ASSOC);
+} else {
+    $agents = [];
 }
 
 // add new house

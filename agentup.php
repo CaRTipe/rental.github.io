@@ -1,19 +1,13 @@
 <?php
-include "./server/dbconfigs.php"; 
-if (isset($_SESSION['login']) && $_SESSION['login']) {
-  header("Location: ./admin/index.php");
- } else if (isset($_GET['error'])) {
-  $error_message = htmlspecialchars($_GET['error']);
- }
+include "./server/dbconfigs.php"
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Agent Signup Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -56,54 +50,58 @@ if (isset($_SESSION['login']) && $_SESSION['login']) {
             </div>
         </div>
     </nav>
-    <div class="d-flex flex-row-reverse align-items-center" id="loginbody">
+    <div class="d-flex flex-row-reverse align-items-center" id="signupbody">
         <div class="card" style="width: 811px; height: 900px;">
-            <div class="image my-3">
-                <img src="./assets/images/logo.png" alt="">
-            </div>
-
             <div class="card" style="width: 420px; height: 450px;">
+                <div class="image my-3">
+                    <img src="./assets/images/logo.png" alt="">
+                </div>
                 <div class="mb-4">
-                    <h1>Login to your Account</h1>
-                    <p>Track your house payments</p>
+                    <h1>Create an Agent Account</h1>
+                    <p>Help us achieve our main goal!</p>
                 </div>
 
                 <form action="./server/processing.php" method="post">
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="mail" placeholder="mail@abc.com">
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" name="code" placeholder="..............">
-                    </div>
-                    <div class="d-flex flex-row align-items-center justify-content-between mb-5" id="checkbox">
-                        <div>
-                            <input type="checkbox" class="form-check-input" value="" id="rememberme">
-                            <label for="rememberme" class="form-check-label">
-                                Remember me
-                            </label>
+                    <div class="d-flex flex-row align-items-center gap-3">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="mail@abc.com" required>
                         </div>
-                        <div>
-                            <a href="#">Forgot Password?</a>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required>
                         </div>
                     </div>
-                    <div class="button">
-                        <button class="btn" type="submit" name="log_clients">Login</button>
+                    <div class="d-flex flex-row align-items-center gap-3">
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="............." required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password2" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="password2" name="password2" placeholder="............" required>
+                        </div>
+                    </div>
+                    <div class="mb-5">
+                        <label for="years" class="form-label">Years of Experience</label>
+                        <input type="number" class="form-control" id="years" name="years" required>
+                    </div>
+
+
+                    <div class="button mb-5">
+                        <button class="btn" type="submit" name="add_agents">Sign up</button>
                     </div>
                 </form>
+
             </div>
-            <div class="create mx-5 mt-5" id="create">
-                <h1 class="h6 mb-3">Not Registered Yet? <a href="./signup.php">Create an Account</a></h1>
-                <h1 class="h6">Want to be an agent? <a href="./agentup.php">Create an Agent Account</a></h1>
+            <div class="login mx-1" id="login">
+                <h1 class="h6">Already have an account? <a href="./agentin.php">Login</a></h1>
             </div>
         </div>
         <div>
             <img src="./assets/images/house.png" alt="" width="1000px" height="900px">
         </div>
     </div>
-
-
 
 
 

@@ -10,9 +10,6 @@ if ($result->num_rows > 0) {
 }
 
 
-// add house to home page
-function displayHouse($houses) {
-    global $conn;
-    
-}
+
+
 ?>

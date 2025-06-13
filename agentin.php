@@ -1,6 +1,6 @@
 <?php
 include "./server/dbconfigs.php"; 
-if (isset($_SESSION['login']) && $_SESSION['login']) {
+if (isset($_SESSION['login1']) && $_SESSION['login1']) {
   header("Location: ./admin/index.php");
  } else if (isset($_GET['error'])) {
   $error_message = htmlspecialchars($_GET['error']);
@@ -13,7 +13,7 @@ if (isset($_SESSION['login']) && $_SESSION['login']) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Agent Login Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -65,7 +65,7 @@ if (isset($_SESSION['login']) && $_SESSION['login']) {
             <div class="card" style="width: 420px; height: 450px;">
                 <div class="mb-4">
                     <h1>Login to your Account</h1>
-                    <p>Track your house payments</p>
+                    <p>Welcome back, Agent</p>
                 </div>
 
                 <form action="./server/processing.php" method="post">
@@ -89,32 +89,15 @@ if (isset($_SESSION['login']) && $_SESSION['login']) {
                         </div>
                     </div>
                     <div class="button">
-                        <button class="btn" type="submit" name="log_clients">Login</button>
+                        <button class="btn" type="submit" name="log_agents">Login</button>
                     </div>
                 </form>
             </div>
             <div class="create mx-5 mt-5" id="create">
-                <h1 class="h6 mb-3">Not Registered Yet? <a href="./signup.php">Create an Account</a></h1>
-                <h1 class="h6">Want to be an agent? <a href="./agentup.php">Create an Agent Account</a></h1>
+                <h1 class="h6">Don't have an agent account? <a href="./agentup.php">Create an Agent Account</a></h1>
             </div>
         </div>
         <div>
             <img src="./assets/images/house.png" alt="" width="1000px" height="900px">
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
-</body>
-
-</html>

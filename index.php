@@ -50,7 +50,7 @@ include "filemanager.php";
             </div>
         </div>
     </nav>
-    <div class="container-fluid d-flex flex-row align-items-center">
+    <div class="container d-flex flex-row align-items-center" style="gap: 150px;">
         <div class="card mx-5 mt-2" style="width: 920px; height: 814px;">
             <div class="mb-4">
                 <h1 class="mb-5">
@@ -89,7 +89,7 @@ include "filemanager.php";
         </div>
     </div>
     <div class=" container-fluid d-flex flex-row align-items-center gap-2 mb-5" id="select">
-        <div class="card" style="width: 380px; height:250px; margin-left: 58px;">
+        <div class="card" style="width: 380px; height:250px; margin-left: 100px;">
             <div class="d-flex flex-column justify-content-center" id="first">
                 <img src="./assets/images/dream.png" alt="" width="62px" height="62px">
                 <h1 class="h5 mt-3">
@@ -122,7 +122,7 @@ include "filemanager.php";
             </div>
         </div>
     </div>
-    <div class="container-fluid" id="properties">
+    <div class="container" id="properties">
         <div class="mb-5">
             <img src="./assets/images/abstract.png" alt="" width="68.4px" height="30px">
         </div>
@@ -143,7 +143,7 @@ include "filemanager.php";
 
         <?php
         if (isset($houses)) {
-            echo "<div class='row mb-5' style='margin-left: 130px;'>";
+            echo "<div class='row mb-5' style='margin-left: 70px;'>";
 
             foreach ($houses as $house) {
                 echo "
