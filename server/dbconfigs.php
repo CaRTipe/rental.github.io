@@ -18,7 +18,7 @@ $sql = "SELECT * FROM clients";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Output data of each row
-    while($row = $result->fetch_all(MYSQLI_ASSOC)) {
+    while ($row = $result->fetch_all(MYSQLI_ASSOC)) {
         $_SESSION['clients'][] = $row;
     }
 }
@@ -26,7 +26,7 @@ $sql = "SELECT * FROM agents";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Output data of each row
-    while($row = $result->fetch_all(MYSQLI_ASSOC)) {
+    while ($row = $result->fetch_all(MYSQLI_ASSOC)) {
         $_SESSION['agents'][] = $row;
     }
 }
@@ -34,13 +34,14 @@ $sql = "SELECT * FROM houses";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Output data of each row
-    while($row = $result->fetch_all(MYSQLI_ASSOC)) {
+    while ($row = $result->fetch_all(MYSQLI_ASSOC)) {
         $_SESSION['houses'][] = $row;
     }
 }
 
 
-function addClients($name, $email, $phone, $password, $date_of_birth) {
+function addClients($name, $email, $phone, $password, $date_of_birth)
+{
     global $conn;
     $query = "INSERT INTO clients (name, email, phone, password, date_of_birth) VALUES ('$name', '$email', '$phone', '$password', '$date_of_birth')";
     if ($conn->query($query) == TRUE) {
@@ -52,19 +53,20 @@ function addClients($name, $email, $phone, $password, $date_of_birth) {
         header("Location: ../signup.php");
     }
 }
-function logClient($email, $password) {
+function logClient($email, $password)
+{
     global $conn;
     $logQuery = "SELECT * FROM clients WHERE email='$email' AND password='$password'";
     $result = $conn->query($logQuery);
     if ($result->num_rows > 0) {
         $_SESSION['login'] = TRUE;
-    }
-    else {
+    } else {
         $_SESSION['login'] = FALSE;
         echo "Invalid email or password!";
     }
 }
-function addAgents($agentname, $emailaddress, $password, $yearsofexp) {
+function addAgents($agentname, $emailaddress, $password, $yearsofexp)
+{
     global $conn;
     $query = "INSERT INTO agents (agent_name, email_address, password, years_of_exp) VALUES ('$agentname', '$emailaddress', '$password', '$yearsofexp')";
     if ($conn->query($query) == TRUE) {
@@ -76,7 +78,8 @@ function addAgents($agentname, $emailaddress, $password, $yearsofexp) {
         header("Location: ../agentup.php");
     }
 }
-function logAgent($emailaddress, $password) {
+function logAgent($emailaddress, $password)
+{
     global $conn;
     $logQuery = "SELECT * FROM agents where email_address = '$emailaddress' and password = '$password'";
     $result = $conn->query($logQuery);
@@ -87,6 +90,16 @@ function logAgent($emailaddress, $password) {
         echo "Invalid email and password!";
     }
 }
+function displayProperties($houseid)
+{
+    global $conn;
 
-
-?>
+    $display = "SELECT * from houses where house_id = '$houseid' ";
+    $answer = $conn->query($display);
+    if ($answer->num_rows > 0) {
+        $row = $answer->fetch_assoc();
+        return $row;
+    } else {
+        return false;
+    }
+}

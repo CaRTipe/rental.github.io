@@ -1,8 +1,6 @@
 <?php 
 include "filemanager.php";
  $edit = $_GET['house_id'];
- echo $edit;
- print_r(getHouse($edit));
  $house = getHouse($edit)
 ?>
 <!DOCTYPE html>
@@ -17,6 +15,9 @@ include "filemanager.php";
 </head>
 
 <body>
+    <div>
+        <h1 class="h1" style="text-align: center; font-size:70px;">EDIT HOUSE <?php echo $edit; ?></h1>
+    </div>
     <div class="container " style="margin-top: 250px;">
         <form action="./processing.php" method="post" enctype="multipart/form-data">
             <input type="hidden" name="house_id" value="<?php 
@@ -25,7 +26,7 @@ include "filemanager.php";
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" name="name" value="<?php 
-                echo $house['name'];
+                echo $house['house_name'];
                 ?>" id="name" required>
             </div>
             <div class="mb-3">

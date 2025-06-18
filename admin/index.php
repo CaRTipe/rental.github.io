@@ -2,6 +2,7 @@
 include "filemanager.php";
 
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,39 +22,9 @@ include "filemanager.php";
 </head>
 
 <body>
-    <nav>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary mb-5" id="navbar">
-            <div class="container d-flex flex-row align-items-center justify-content-around">
-                <div id="brand">
-                    <img src="./assets/images/house.png" alt="" width="40px" height="40px">
-                    <a class="navbar-brand" href="#">Sustainable Houses</a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse mx-5" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item mx-4">
-                            <a class="nav-link" aria-current="page" href="index.php">Houses</a>
-                        </li>
-                        <li class="nav-item mx-4">
-                            <a class="nav-link" href="agents.php">Agents</a>
-                        </li>
-
-                        <li class="nav-item mx-4">
-                            <a class="nav-link" href="clients.php">Clients</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <?php
-                    if (isset($_SESSION['login']) && $_SESSION['login']): ?>
-                        <a href="../logout.php"><button class="btn btn-secondary" style="width: 200px; height: 50px;">Log out</button></a>
-                    <?php
-                    endif; ?>
-                </div>
-        </nav>
-    </nav>
+    <?php
+    include './includes/navbar.php'; 
+    ?>
     <div class="d-flex flex-row-reverse align-items-center justify-content-end">
         <div>
             <button class="btn btn-secondary mb-5" style="width: 200px; height: 50px;" data-bs-toggle="modal" data-bs-target="#addHouseModal">
@@ -61,9 +32,6 @@ include "filemanager.php";
             </button>
             <button class="btn btn-secondary mb-5" style="width: 200px; height: 50px;" data-bs-toggle="modal" data-bs-target="#assignModal">
                 Assign
-            </button>
-            <button class="btn btn-secondary mb-5" style="width: 200px; height: 50px;" data-bs-toggle="modal" data-bs-target="#checkModal">
-                Check
             </button>
         </div>
 
@@ -77,12 +45,13 @@ include "filemanager.php";
                     <th>Bedrooms</th>
                     <th>Bathrooms</th>
                     <th>Price</th>
+                    <th>Agent Name</th>
+                    <th>Client Name</th>
                     <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                print_r($houses);
                 if (isset($houses)) {
                     foreach ($houses as $house) {
                         echo "<tr>";
@@ -91,6 +60,8 @@ include "filemanager.php";
                         echo "<td>" . htmlspecialchars(($house['bedroom'])) . " Bedrooms </td>";
                         echo "<td>" . htmlspecialchars(($house['bathroom'])) . " Bathrooms </td>";
                         echo "<td>" . htmlspecialchars($house['price']) . "</td>";
+                        echo "<td>" . ($house['agent_name'] ? htmlspecialchars($house['agent_name']) : '-') . "</td>";
+                        echo "<td>" . ($house['client_name'] ? htmlspecialchars($house['client_name']) : '-') . "</td>";
                         echo "<td>" .
                             "<div class='d-flex flex-row align-items-center'><a href='edit.php?house_id={$house['house_id']}' class='btn'><img src='./assets/images/edit.png' alt='Edit' width='20px' height='20px'></a>" .
                             "<a href='#' class='btn'><img src='./assets/images/delete.png' alt='Delete' width='20px' height='20px'></a> </div>" .
@@ -154,7 +125,7 @@ include "filemanager.php";
                             <?php
                             if (!empty($houses)) {
                                 foreach ($houses as $house) {
-                                    echo "<option value = '" . htmlspecialchars($house['house_id']) . "'>" . htmlspecialchars($house['name']) . "</option>";
+                                    echo "<option value = '" . htmlspecialchars($house['house_id']) . "'>" . htmlspecialchars($house['house_name']) . "</option>";
                                 }
                             }
                             ?>
@@ -164,7 +135,7 @@ include "filemanager.php";
                             <?php
                             if (!empty($clients)) {
                                 foreach ($clients as $client) {
-                                    echo "<option value = '" . htmlspecialchars($client['id']) . "'>" . htmlspecialchars($client['name']) . "</option>";
+                                    echo "<option value = '" . htmlspecialchars($client['id']) . "'>" . htmlspecialchars($client['client_name']) . "</option>";
                                 }
                             }
                             ?>
@@ -186,7 +157,7 @@ include "filemanager.php";
             </div>
         </div>
     </div>
-    <div class="modal fade" id="addHouseModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="addHouseModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
@@ -201,7 +172,7 @@ include "filemanager.php";
 
                         ?>
                     </table>
-                </div>
+                </div> -->
 
 
 

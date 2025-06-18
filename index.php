@@ -13,43 +13,9 @@ include "filemanager.php";
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
-        <div class="container d-flex flex-row align-items-center justify-content-around">
-            <div id="brand">
-                <img src="./assets/images/house.png" alt="" width="40px" height="40px">
-                <a class="navbar-brand" href="#">Sustainable Houses</a>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse mx-5" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item mx-4">
-                        <a class="nav-link" aria-current="page" href="./index.php">Home</a>
-                    </li>
-                    <li class="nav-item mx-4">
-                        <a class="nav-link" href="#">About us</a>
-                    </li>
-
-                    <li class="nav-item mx-4">
-                        <a class="nav-link" href="#">Properties</a>
-                    </li>
-
-                    <li class="nav-item mx-4">
-                        <a class="nav-link" href="#">Services</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="d-flex flex-row align-items-center gap-3">
-                <a href="./signin.php">
-                    <button class="btn btn-outline-secondary" style="width: 120px; height: 40px;">Login</button>
-                </a>
-                <a href="./signup.php">
-                    <button class="btn btn-secondary" style="width: 120px; height: 40px;">Sign Up</button>
-                </a>
-            </div>
-        </div>
-    </nav>
+    <?php
+    include "navbar.php" 
+    ?>
     <div class="container d-flex flex-row align-items-center" style="gap: 150px;">
         <div class="card mx-5 mt-2" style="width: 920px; height: 814px;">
             <div class="mb-4">
@@ -145,14 +111,15 @@ include "filemanager.php";
         if (isset($houses)) {
             echo "<div class='row mb-5' style='margin-left: 70px;'>";
 
-            foreach ($houses as $house) {
+            foreach ($houses as $key=>$house) {
+                if ($key > 2) break;
                 echo "
                     <div class='card col-md-4 mb-4'>
                         <div class='w-100'>
                             <img style='width:100%' src='./uploads/{$house['image']}' alt=''>
                         </div>
                         <div>
-                            <h1 class='h4 my-3'>{$house['name']}</h1>
+                            <h1 class='h4 my-3'>{$house['house_name']}</h1>
                             <p class='my-3'>
                                 {$house['description']} <a href='#'>Read more</a>
                             </p>
@@ -193,9 +160,9 @@ include "filemanager.php";
                                     </h1>
                                 </div>
                                 <div>
-                                    <button class='btn' style='background-color: purple; width: 190px; height: 40px; color: white; name='property'>
+                                    <a href='singleproperty.php?house_id={$house['house_id']}'><button class='btn' style='background-color: purple; width: 190px; height: 40px; color: white;'>
                                         View Property Details
-                                    </button>
+                                    </button></a>
                                 </div>
                             </div>
                         </div>
@@ -607,7 +574,7 @@ include "filemanager.php";
             <div>
                 <h1 class="h4 mb-5" style="color: grey;">Contact us</h1>
                 <ul style="list-style-type: none; padding: 0;">
-                    <li class="mb-3"><a href="#">Contact Form</a></li>
+                    <li class="mb-3"><a href="contact.php">Contact Form</a></li>
                     <li class="mb-3"><a href="#">Our Offices</a></li>
                 </ul>
             </div>

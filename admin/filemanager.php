@@ -7,7 +7,7 @@ if (!isset($_SESSION['login']) && $_SESSION['login']) {
 }
 
 // get all houses
-$sql = "SELECT * FROM houses";
+$sql = "SELECT houses.*, agents.agent_name as agent_name, clients.client_name as client_name FROM `houses` left JOIN house_allocation on houses.house_id = house_allocation.house_id left join clients on house_allocation.client_id = clients.id left join agents on house_allocation.agent_id = agents.agent_id;";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     $houses = $result->fetch_all(MYSQLI_ASSOC);
@@ -105,16 +105,4 @@ function assignHouses($clientid, $houseid, $agentid)
         return false;
     }
 }
-function checkHouses()
-{
-    global $conn;
 
-    $look = "SELECT ha.id, a.agent_id, a.agent_name AS agent_name, h.house_id, h.name AS house_name, h.price, c.id, c.name AS client_name FROM house_allocation ha LEFT JOIN agents a ON ha.agent_id = a.agent_id LEFT JOIN houses h ON ha.house_id = h.house_id LEFT JOIN clients c ON ha.id = c.id;";
-
-    if ($conn->query($look) === TRUE) {
-        return true;
-    } else {
-        echo "Error: " . $look . "<br>" . $conn->error;
-        return false;
-    }
-}
