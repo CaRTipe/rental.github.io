@@ -3,6 +3,12 @@ include "filemanager.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    body {
+    background-image: url(./assets/images/bg.png);
+    background-size: cover;
+}
+</style>
 
 <head>
     <meta charset="UTF-8">
@@ -47,7 +53,7 @@ include "filemanager.php";
         </nav>
     </nav>
     <div class="container mt-5">
-        <table class="table">
+        <table class="table table-striped">
             <tr>
                 <th>Agent Name</th>
                 <th>Email Address</th>

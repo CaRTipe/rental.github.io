@@ -1,10 +1,12 @@
 <?php
 include "./server/dbconfigs.php"; 
-if (isset($_SESSION['login1']) && $_SESSION['login1']) {
+if (isset($_SESSION['login']) && $_SESSION['login']) {
   header("Location: ./admin/index.php");
  } else if (isset($_GET['error'])) {
   $error_message = htmlspecialchars($_GET['error']);
  }
+// $idk = $_SESSION['login'];
+// print_r($idk);
 ?>
 
 <!DOCTYPE html>

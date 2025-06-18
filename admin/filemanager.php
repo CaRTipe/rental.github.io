@@ -2,7 +2,8 @@
 include "../server/dbconfigs.php";
 
 if (!isset($_SESSION['login']) && $_SESSION['login']) {
-  header("Location: ../signin.php");
+    header("Location: ../agentin.php");
+    exit();
 }
 
 // get all houses
@@ -36,7 +37,8 @@ if ($result->num_rows > 0) {
 }
 
 // add new house
-function addHouse($name, $description, $price, $bedroom, $bathroom, $image) {
+function addHouse($name, $description, $price, $bedroom, $bathroom, $image)
+{
     global $conn;
     $query = "INSERT INTO houses (name, description, price, bedroom, bathroom, image) VALUES ('$name', '$description', '$price', '$bedroom', '$bathroom', '$image')";
     if ($conn->query($query) === TRUE) {
@@ -46,9 +48,10 @@ function addHouse($name, $description, $price, $bedroom, $bathroom, $image) {
         return false;
     }
 }
-function getHouse($houseid) {
+function getHouse($houseid)
+{
     global $conn;
-    
+
     // Use prepared statement to prevent SQL injection
     $stmt = $conn->prepare("SELECT * FROM houses WHERE house_id = ?");
     $stmt->bind_param("i", $houseid); // assuming $houseid is an integer
@@ -67,7 +70,8 @@ function getHouse($houseid) {
     }
 }
 
-function updateHouse($id, $name, $description, $price, $bedroom, $bathroom, $image = null) {
+function updateHouse($id, $name, $description, $price, $bedroom, $bathroom, $image = null)
+{
     global $conn;
 
     if (isset($image) && !empty($image)) {
@@ -88,7 +92,8 @@ function updateHouse($id, $name, $description, $price, $bedroom, $bathroom, $ima
         return false;
     }
 }
-function assignHouses($clientid, $houseid, $agentid) {
+function assignHouses($clientid, $houseid, $agentid)
+{
     global $conn;
 
 
@@ -99,8 +104,17 @@ function assignHouses($clientid, $houseid, $agentid) {
         echo "Error: " . $assign . "<br>" . $conn->error;
         return false;
     }
-
 }
+function checkHouses()
+{
+    global $conn;
 
+    $look = "SELECT ha.id, a.agent_id, a.agent_name AS agent_name, h.house_id, h.name AS house_name, h.price, c.id, c.name AS client_name FROM house_allocation ha LEFT JOIN agents a ON ha.agent_id = a.agent_id LEFT JOIN houses h ON ha.house_id = h.house_id LEFT JOIN clients c ON ha.id = c.id;";
 
-?>
+    if ($conn->query($look) === TRUE) {
+        return true;
+    } else {
+        echo "Error: " . $look . "<br>" . $conn->error;
+        return false;
+    }
+}

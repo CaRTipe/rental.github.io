@@ -136,9 +136,9 @@ include "filemanager.php";
                 Explore our handpicked selection of properties. Each listing offers a glimpse into the exceptional houses and investments available through <br> Sustainable Houses.
                 Click "View Details" for more information
             </p>
-            <button class="btn btn-secondary mb-3" style="width: 200px;">
+            <a href="propertydetails.php"><button class="btn btn-secondary mb-3" style="width: 200px;">
                 View All Properties
-            </button>
+            </button></a>
         </div>
 
         <?php
@@ -193,7 +193,7 @@ include "filemanager.php";
                                     </h1>
                                 </div>
                                 <div>
-                                    <button class='btn' style='background-color: purple; width: 190px; height: 40px; color: white;'>
+                                    <button class='btn' style='background-color: purple; width: 190px; height: 40px; color: white; name='property'>
                                         View Property Details
                                     </button>
                                 </div>
