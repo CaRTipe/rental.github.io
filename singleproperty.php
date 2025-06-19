@@ -18,7 +18,7 @@ $house = displayProperties($disp);
 
 <body>
     <?php
-    include "navbar.php"; 
+    include "./navbar/navbar.php"; 
     ?>
     <div>
         <h1 class="h1 my-5" style="text-align: center;"><?php 

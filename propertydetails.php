@@ -14,7 +14,7 @@ include 'filemanager.php'
 
 <body>
     <?php
-    include "navbar.php";
+    include "./navbar/navbar.php";
     ?>
     <div class="container mt-5">
         <?php

@@ -14,7 +14,7 @@ include "filemanager.php"
 
 <body>
     <?php
-    include "navbar.php"
+    include "./navbar/navbar.php"
     ?>
     <div>
         <h1 class="h1" style="margin-bottom: 200px; font-size: 100px; text-align:center;">CONTACT US</h1>

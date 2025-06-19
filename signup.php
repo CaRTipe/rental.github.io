@@ -14,7 +14,7 @@ include "./server/dbconfigs.php"
 
 <body>
     <?php
-    include "navbar.php";
+    include "./navbar/navbar.php";
     ?>
     <div class="d-flex flex-row-reverse align-items-center" id="signupbody">
         <div class="card" style="width: 811px; height: 900px;">

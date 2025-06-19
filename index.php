@@ -14,7 +14,7 @@ include "filemanager.php";
 
 <body>
     <?php
-    include "navbar.php" 
+    include "./navbar/navbar.php" 
     ?>
     <div class="container d-flex flex-row align-items-center" style="gap: 150px;">
         <div class="card mx-5 mt-2" style="width: 920px; height: 814px;">
