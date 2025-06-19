@@ -1,6 +1,6 @@
 <?php
 include "dbconfigs.php";
-
+header("Content-Type: application/json");
 
 if(isset($_POST['add_clients'])) {
     if(isset($_POST['name']) && $_POST['email'] && $_POST['phone'] && $_POST['password'] && $_POST['password2'] && $_POST['date']) {
@@ -39,14 +39,23 @@ if(isset($_POST['add_clients'])) {
         $emailaddress = htmlspecialchars($_POST['mail']);
         $password = htmlspecialchars($_POST['code']);
         logAgent($emailaddress, $password);
-        if(isset($_SESSION['login']) && $_SESSION['login'] == TRUE) {
-            header("Location: ../admin/index.php");
-            exit();
+        if(isset($_SESSION['login']) && $_SESSION['login'] == TRUE) { 
+            $response = [
+                "success" => true,
+                "message" => "login success",
+                "data" => [
+                    "email" => $emailaddress,
+                    "password" => $password
+                ]
+            ];
         } else {
-            header("Location: ../agentin.php?error=Invalid email or password");
-            exit();
-            echo "Invalid email or password!";
+            $response = [
+                "success" => false,
+                "message" => "login unsuccessful",
+            ];
         }
+
+        echo json_encode($response);
 
     }
 }

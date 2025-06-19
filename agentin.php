@@ -36,7 +36,7 @@ if (isset($_SESSION['login']) && $_SESSION['login']) {
                     <p>Welcome back, Agent</p>
                 </div>
 
-                <form action="./server/processing.php" method="post">
+                <form id="agentin">
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
                         <input type="email" class="form-control" id="email" name="mail" placeholder="mail@abc.com">
@@ -57,7 +57,7 @@ if (isset($_SESSION['login']) && $_SESSION['login']) {
                         </div>
                     </div>
                     <div class="button">
-                        <button class="btn" type="submit" name="log_agents">Login</button>
+                        <button class="btn" name="log_agents">Login</button>
                     </div>
                 </form>
             </div>
@@ -69,3 +69,59 @@ if (isset($_SESSION['login']) && $_SESSION['login']) {
             <img src="./assets/images/house.png" alt="" width="1000px" height="900px">
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
+
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        $(document).ready(function() {})
+        $('#agentin').on('submit', function(e) {
+            e.preventDefault();
+            let mail = $('#email').val()
+            let code = $('#password').val()
+            let log_agents = true
+
+
+            // const data = new FormData()
+            const data = {
+                'mail': mail,
+                'code': code,
+                'log_agents': log_agents,
+            }
+
+            // add values to the form data object            // name
+            // data.append('mail', $('#email').val())
+            // password
+            // data.append('mail', $('#password').val())
+            // actions
+            // data.append('log_agents', true)
+
+            $.ajax({
+                type: 'POST',
+                url: './server/processing.php',
+                // contentType: 'application/json',
+                data: data,
+                dataType: 'json',
+                success: function(response) {
+                    if (response.success) {
+                        Swal.fire({
+                            title: "Welcome!",
+                            text: "Signed in",
+                            icon: "success"
+                        });
+                        setTimeout(() => {
+                            window.location.href = "./admin/index.php";
+                        }, 2000)
+                    } else {
+                        window.location.href = "./agentin.php?error=Invalid email or password";
+
+                    }
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

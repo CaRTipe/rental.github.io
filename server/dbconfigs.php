@@ -87,7 +87,6 @@ function logAgent($emailaddress, $password)
         $_SESSION['login'] = TRUE;
     } else {
         $_SESSION['login'] = FALSE;
-        echo "Invalid email and password!";
     }
 }
 function displayProperties($houseid)
