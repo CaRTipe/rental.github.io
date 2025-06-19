@@ -17,7 +17,7 @@
                     </li>
 
                     <li class="nav-item mx-4">
-                        <a class="nav-link" href="#">Properties</a>
+                        <a class="nav-link" href="propertydetails.php">Properties</a>
                     </li>
 
                     <li class="nav-item mx-4">
