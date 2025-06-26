@@ -1,6 +1,6 @@
 <?php include "filemanager.php"; ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="auto">
 
 <head>
     <meta charset="UTF-8">
@@ -10,16 +10,87 @@
     <link rel="stylesheet" href="./style.css">
     <style>
         body {
-            background-image: url(./assets/images/bg.png);
-            background-size: cover;
+            background-color: #f5f7fa;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
         }
 
+        /* Navbar Style */
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+            padding: 1rem 2rem;
+        }
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: #333 !important;
+            font-weight: 500;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #00796b !important;
+        }
+
+        /* Houses Table Container */
+        #houses_table {
+            background-color: #e8f5e9;
+            /* Light green tint */
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            margin-top: 60px;
+        }
+
+        /* Table Styles */
+        .table {
+            background-color: #ffffff;
+            border-radius: 12px;
+            font-size: 15px;
+            color: #333;
+            overflow: hidden;
+        }
+
+        /* Table Head */
+        .table thead {
+            background-color: #00796b;
+            color: #ffffff;
+        }
+
+        .table th,
+        .table td {
+            padding: 14px 18px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        /* Hover Effect */
+        .table tbody tr:hover {
+            background-color: #f1f1f1;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Action Buttons */
+        .btn img {
+            transition: transform 0.2s ease;
+        }
+
+        .btn:hover img {
+            transform: scale(1.2);
+        }
+
+        /* Responsive tweaks */
         @media (max-width: 576px) {
 
             td,
             th {
-                font-size: 12px;
+                font-size: 13px;
                 padding: 6px !important;
+            }
+
+            .btn img {
+                width: 18px;
+                height: 18px;
             }
         }
     </style>
@@ -43,7 +114,7 @@
 
     <div class="container" id="houses_table">
         <div class="table-responsive">
-            <table class="table table-info table-bordered table-hover text-center align-middle">
+            <table class="table table-bordered table-striped table-hover text-center align-middle">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -62,7 +133,9 @@
                         foreach ($houses as $house) {
                             echo "<tr>";
                             echo "<td>" . htmlspecialchars($house['house_name']) . "</td>";
-                            echo "<td>" . htmlspecialchars($house['description']) . "</td>";
+                            $shortDesc = strlen($house['description']) > 50 ? substr($house['description'], 0, 20) . '...' : $house['description'];
+                            echo "<td title='" . htmlspecialchars($house['description']) . "'>" . htmlspecialchars($shortDesc) . "</td>";
+
                             echo "<td>" . htmlspecialchars($house['bedroom']) . " Bedrooms</td>";
                             echo "<td>" . htmlspecialchars($house['bathroom']) . " Bathrooms</td>";
                             echo "<td>" . htmlspecialchars($house['price']) . "</td>";

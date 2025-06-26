@@ -270,7 +270,7 @@ include "filemanager.php";
     </div>
 
     <!-- Footer Top Section -->
-    <div class="container-fluid py-5 text-white" style="background-color: rgb(32, 32, 32);" id="bfooter">
+    <div class="container py-5 text-white" style="background-color: rgb(32, 32, 32);" id="bfooter">
         <div class="row g-5">
             <!-- Logo and Newsletter -->
             <div class="col-md-4">

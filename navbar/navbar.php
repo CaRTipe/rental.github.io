@@ -31,25 +31,25 @@ $isAuthPage = in_array($currentPage, ['signin.php', 'signup.php', 'agentin.php',
                 <!-- Nav links -->
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 flex-lg-row">
                     <li class="nav-item px-lg-2">
-                        <a class="nav-link <?= $isAuthPage ? 'text-dark' : 'text-white' ?>" href="./index.php">Home</a>
+                        <a class="nav-link <?= $isAuthPage ? 'text-secondary' : 'text-white' ?>" href="./index.php">Home</a>
                     </li>
                     <li class="nav-item px-lg-2">
-                        <a class="nav-link <?= $isAuthPage ? 'text-dark' : 'text-white' ?>" href="#">About Us</a>
+                        <a class="nav-link <?= $isAuthPage ? 'text-secondary' : 'text-white' ?>" href="#">About Us</a>
                     </li>
                     <li class="nav-item px-lg-2">
-                        <a class="nav-link <?= $isAuthPage ? 'text-dark' : 'text-white' ?>" href="propertydetails.php">Properties</a>
+                        <a class="nav-link <?= $isAuthPage ? 'text-secondary' : 'text-white' ?>" href="propertydetails.php">Properties</a>
                     </li>
                     <li class="nav-item px-lg-2">
-                        <a class="nav-link <?= $isAuthPage ? 'text-dark' : 'text-white' ?>" href="#">Services</a>
+                        <a class="nav-link <?= $isAuthPage ? 'text-secondary' : 'text-white' ?>" href="#">Services</a>
                     </li>
                 </ul>
 
                 <!-- Login/Sign Up Buttons -->
                 <div class="mt-3 mt-lg-0 d-flex gap-2">
-                    <a href="./signin.php">
+                    <a href="./agentin.php">
                         <button class="btn btn-outline-light btn-sm btn-lg-outline-dark">Login</button>
                     </a>
-                    <a href="./signup.php">
+                    <a href="./agentup.php">
                         <button class="btn btn-light btn-sm btn-lg-dark">Sign Up</button>
                     </a>
                 </div>

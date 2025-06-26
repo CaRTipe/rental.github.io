@@ -22,7 +22,6 @@ include "./server/dbconfigs.php";
         }
 
         .card {
-            border-radius: 16px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
@@ -50,7 +49,7 @@ include "./server/dbconfigs.php";
 <body>
     <?php include "./navbar/navbar.php"; ?>
 
-    <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between" id="signupbody">
+    <div class="container-fluid d-flex flex-column flex-lg-row-reverse align-items-center justify-content-center gap-0" id="signupbody">
         <div class="card p-4 mb-5 mb-lg-0" style="max-width: 500px;">
             <div class="text-center mb-3">
                 <img src="./assets/images/logo.png" alt="Logo" class="img-fluid" width="100">
@@ -91,7 +90,7 @@ include "./server/dbconfigs.php";
         </div>
 
         <div class="d-none d-lg-block">
-            <img src="./assets/images/house.png" alt="House" class="img-fluid" style="max-width: 700px;">
+            <img src="./assets/images/house.png" alt="House" class="img-fluid" width="800px" style="max-width: none;">
         </div>
     </div>
 
@@ -126,7 +125,7 @@ include "./server/dbconfigs.php";
                         if (response.success) {
                             Swal.fire({
                                 title: "Welcome!",
-                                text: "Signed up",
+                                text: "Account created successfully.",
                                 icon: "success",
                                 timer: 2000,
                                 showConfirmButton: false

@@ -10,10 +10,67 @@
     <link rel="stylesheet" href="./style.css">
     <style>
         body {
-            background-image: url(./assets/images/bg.png);
-            background-size: cover;
+            background-color: #f5f7fa;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
         }
 
+        /* Navbar Style */
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+            padding: 1rem 2rem;
+        }
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: #333 !important;
+            font-weight: 500;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #00796b !important;
+        }
+
+        /* Table Container Styling */
+        #client_table {
+            background-color: #e8f5e9;
+            /* Light green tint */
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            margin-top: 60px;
+        }
+
+        /* Table Design */
+        .table {
+            background-color: #ffffff;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 12px;
+            font-size: 15px;
+            color: #333;
+        }
+
+        /* Table Header */
+        .table thead {
+            background-color: #00695c;
+            color: #ffffff;
+        }
+
+        .table th,
+        .table td {
+            padding: 14px 20px;
+            vertical-align: middle;
+        }
+
+        /* Row Hover Effect */
+        .table tbody tr:hover {
+            background-color: #f1f1f1;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Responsive Font */
         @media (max-width: 576px) {
 
             td,
@@ -30,7 +87,7 @@
 
     <div class="container my-5" id="client_table">
         <div class="table-responsive">
-            <table class="table table-success table-bordered table-striped text-center align-middle">
+            <table class="table table-bordered table-striped text-center align-middle">
                 <thead class="table-dark">
                     <tr>
                         <th>Name</th>

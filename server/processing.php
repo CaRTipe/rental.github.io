@@ -32,6 +32,10 @@ if (isset($_POST['add_clients'])) {
             echo "Passwords do not match!";
             exit;
         }
+        if ($_POST['years'] > 15) {
+            echo "Years of experience cannot exceed 15!";
+            exit;
+        }
         addAgents($_POST['name'], $_POST['email'], $_POST['password'], $_POST['years']);
         if (isset($_SESSION['signup'])) {
             $response = [
