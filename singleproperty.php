@@ -7,79 +7,72 @@ $house = displayProperties($disp);
 <html lang="en" data-bs-theme="dark">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> <?php
-    echo $house['house_name'];
-    ?></title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><?php echo $house['house_name']; ?></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-    <?php
-    include "./navbar/navbar.php"; 
-    ?>
-    <div>
-        <h1 class="h1 my-5" style="text-align: center;"><?php 
-       echo $house['house_name'];
-        ?></h1>
-    </div>
-    <div class="container">
-        <?php
-        echo "<img style='width:100%' src='./uploads/{$house['image']}' alt=''>";
-        echo            "<div>
-                            <h1 class='h4 my-3'>{$house['house_name']}</h1>
-                            <p class='my-3'>
-                                {$house['description']} <a href='#'>Read more</a>
-                            </p>
-                            <div class='d-flex flex-row align-items-center mb-3'>
-                                <div class='card d-flex flex-row align-items-center gap-2' style='width: 155px; height: 43px;'>
-                                    <div>
-                                        <img src='./assets/images/bedroom.png' alt='' width='24px' height='24px'>
-                                    </div>
-                                    <div>
-                                        <p>{$house['bedroom']}-bedroom</p>
-                                    </div>
-                                </div>
-                                <div class='card d-flex flex-row align-items-center gap-2' style='width: 155px; height: 43px;'>
-                                    <div>
-                                        <img src='./assets/images/bathroom.png' alt='' width='24px' height='24px'>
-                                    </div>
-                                    <div>
-                                        <p>{$house['bathroom']}-bathroom</p>
-                                    </div>
-                                </div>
-                                <div class='card d-flex flex-row align-items-center gap-2' style='width: 155px; height: 43px;'>
-                                    <div>
-                                        <img src='./assets/images/villa.png' alt='' width='24px' height='24px'>
-                                    </div>
-                                    <div>
-                                        <p>Villa</p>
-                                    </div>
-                                </div>
+    <?php include "./navbar/navbar.php"; ?>
 
-                            </div>
-                            <div class='d-flex flex-row justify-content-between align-items-center mb-3'>
-                                <div>
-                                    <h1 class='h4' style='color: grey;'>
-                                        Price
-                                    </h1>
-                                    <h1 class='h3' style='color: #dddddd;'>
-                                        {$house['price']}
-                                    </h1>
-                                </div>
-                                <div>
-                                <button class='class='btn' style='background-color: purple; width: 190px; height: 40px; color: white; border-radius: 20px;'>
-                                Buy Now
-                                </button>
-                                </div>
-                            </div>
-                        </div>"
-        ?>
+    <div class="text-center my-5">
+        <h1 class="h1"><?php echo $house['house_name']; ?></h1>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
+
+    <div class="container mb-5">
+        <div class="row g-4">
+            <!-- Property Image -->
+            <div class="col-12">
+                <img src="./uploads/<?php echo $house['image']; ?>" alt="House Image" class="img-fluid rounded" />
+            </div>
+
+            <!-- Property Details -->
+            <div class="col-12">
+                <h2 class="h4 my-3"><?php echo $house['house_name']; ?></h2>
+                <p class="my-3">
+                    <?php echo $house['description']; ?> <a href="#">Read more</a>
+                </p>
+
+                <!-- Icons Row -->
+                <div class="row g-3 mb-4">
+                    <div class="col-12 col-sm-4">
+                        <div class="card d-flex flex-row align-items-center gap-2 p-2">
+                            <img src="./assets/images/bedroom.png" alt="bedroom" width="24" height="24" />
+                            <p class="mb-0"><?php echo $house['bedroom']; ?>-bedroom</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <div class="card d-flex flex-row align-items-center gap-2 p-2">
+                            <img src="./assets/images/bathroom.png" alt="bathroom" width="24" height="24" />
+                            <p class="mb-0"><?php echo $house['bathroom']; ?>-bathroom</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <div class="card d-flex flex-row align-items-center gap-2 p-2">
+                            <img src="./assets/images/villa.png" alt="villa" width="24" height="24" />
+                            <p class="mb-0">Villa</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Price and Button -->
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                    <div>
+                        <h4 class="text-muted mb-1">Price</h4>
+                        <h3 class="text-light"><?php echo $house['price']; ?></h3>
+                    </div>
+                    <button class="btn btn-primary px-4 py-2" style="background-color: purple; border-radius: 20px;">
+                        Buy Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,14 +1,6 @@
-<?php
-include "filemanager.php"
-?>
+<?php include "filemanager.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
-<style>
-    body {
-        background-image: url(./assets/images/bg.png);
-        background-size: cover;
-    }
-</style>
 
 <head>
     <meta charset="UTF-8">
@@ -16,52 +8,59 @@ include "filemanager.php"
     <title>Clients</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
+    <style>
+        body {
+            background-image: url(./assets/images/bg.png);
+            background-size: cover;
+        }
+
+        @media (max-width: 576px) {
+
+            td,
+            th {
+                font-size: 13px;
+                padding: 6px !important;
+            }
+        }
+    </style>
 </head>
 
-
 <body>
-    <?php
-    include './includes/navbar.php';
-    ?>
+    <?php include './includes/navbar.php'; ?>
 
-    <div class="container" id="client_table">
-        <table class="table table-success">
-            <tr>
-                <th>Name</th>
-                <th>Email Address</th>
-                <th>Phone</th>
-                <th>Date of Birth</th>
-            </tr>
-            <?php
-            if (isset($clients)) {
-                foreach ($clients as $client) {
-                    echo "<tr>";
-                    echo "<td>" . htmlspecialchars($client['client_name']) . "</td>";
-                    echo "<td>" . htmlspecialchars($client['email']) . "</td>";
-                    echo "<td>" . htmlspecialchars($client['phone']) . "</td>";
-                    echo "<td>" . htmlspecialchars($client['date_of_birth']) . "</td>";
-                    echo "</tr>";
-                }
-            } else {
-                echo "<tr><td colspan='3'>No Clients Available</td></tr>";
-            }
-            ?>
-        </table>
-
+    <div class="container my-5" id="client_table">
+        <div class="table-responsive">
+            <table class="table table-success table-bordered table-striped text-center align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email Address</th>
+                        <th>Phone</th>
+                        <th>Date of Birth</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    if (isset($clients) && count($clients) > 0) {
+                        foreach ($clients as $client) {
+                            echo "<tr>";
+                            echo "<td>" . htmlspecialchars($client['client_name']) . "</td>";
+                            echo "<td>" . htmlspecialchars($client['email']) . "</td>";
+                            echo "<td>" . htmlspecialchars($client['phone']) . "</td>";
+                            echo "<td>" . htmlspecialchars($client['date_of_birth']) . "</td>";
+                            echo "</tr>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='4'>No Clients Available</td></tr>";
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
