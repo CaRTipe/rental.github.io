@@ -16,11 +16,7 @@ if ($result->num_rows > 0) {
     $messages = [];
 }
 
-function collectMessage() {
-    global $conn;
 
-    
-}
 
 
 ?>

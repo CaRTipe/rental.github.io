@@ -13,7 +13,7 @@ include "./server/dbconfigs.php"
 </head>
 
 <body>
-    <?php 
+    <?php
     include "./navbar/navbar.php";
     ?>
     <div class="d-flex flex-row-reverse align-items-center" id="signupbody">
@@ -27,7 +27,7 @@ include "./server/dbconfigs.php"
                     <p>Help us achieve our main goal!</p>
                 </div>
 
-                <form action="./server/processing.php" method="post">
+                <form action="" method="post" id="agentup">
                     <div class="d-flex flex-row align-items-center gap-3">
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
@@ -55,7 +55,7 @@ include "./server/dbconfigs.php"
 
 
                     <div class="button mb-5">
-                        <button class="btn" type="submit" name="add_agents">Sign up</button>
+                        <button class="btn" name="add_agents">Sign up</button>
                     </div>
                 </form>
 
@@ -79,6 +79,53 @@ include "./server/dbconfigs.php"
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        $(document).ready(function() {
+            
+        })
+        $("#agentup").on('submit', function(e) {
+            e.preventDefault();
+            let email = $("#email").val()
+            let name = $("#name").val()
+            let password = $("#password").val()
+            let password2 = $("#password2").val()
+            let year = $("#years").val()
+            let add_agents = true
+
+
+            const data = {
+                'email': email,
+                'name': name,
+                'password': password,
+                'password2': password2,
+                'years': year,
+                'add_agents': add_agents, 
+
+            }
+            $.ajax({
+                type: 'POST',
+                url:  './server/processing.php',
+                data: data,
+                dataType: 'json',
+                success: function(response) {
+                    if(response.success) {
+                       Swal.fire({
+                            title: "Welcome!",
+                            text: "Signed up",
+                            icon: "success"
+                        }); 
+                        setTimeout(()=>{
+                            window.location.href = "agentin.php"
+                        }, 2000)
+                    }
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>

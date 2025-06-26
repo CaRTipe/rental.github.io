@@ -40,7 +40,7 @@ if ($result->num_rows > 0) {
 function addHouse($name, $description, $price, $bedroom, $bathroom, $image)
 {
     global $conn;
-    $query = "INSERT INTO houses (name, description, price, bedroom, bathroom, image) VALUES ('$name', '$description', '$price', '$bedroom', '$bathroom', '$image')";
+    $query = "INSERT INTO houses (house_name, description, price, bedroom, bathroom, image) VALUES ('$name', '$description', '$price', '$bedroom', '$bathroom', '$image')";
     if ($conn->query($query) === TRUE) {
         return true;
     } else {
@@ -76,12 +76,12 @@ function updateHouse($id, $name, $description, $price, $bedroom, $bathroom, $ima
 
     if (isset($image) && !empty($image)) {
         // Update including image
-        $sql = "UPDATE houses SET name = ?, description = ?, price = ?, bedroom = ?, bathroom = ?, image = ? WHERE house_id = ?";
+        $sql = "UPDATE houses SET house_name = ?, description = ?, price = ?, bedroom = ?, bathroom = ?, image = ? WHERE house_id = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("sssiisi", $name, $description, $price, $bedroom, $bathroom, $image, $id);
     } else {
         // Update without image
-        $sql = "UPDATE houses SET name = ?, description = ?, price = ?, bedroom = ?, bathroom = ? WHERE house_id = ?";
+        $sql = "UPDATE houses SET house_name = ?, description = ?, price = ?, bedroom = ?, bathroom = ? WHERE house_id = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("sssiii", $name, $description, $price, $bedroom, $bathroom, $id);
     }

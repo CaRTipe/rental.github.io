@@ -1,83 +1,88 @@
 * {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 a {
-    text-decoration: none;
-    color: rgb(238, 228, 228);
+  text-decoration: none;
+  color: rgb(238, 228, 228);
 }
 a:hover {
- cursor: pointer;
+  cursor: pointer;
 }
-#brand img{
-    border-radius: 50%;
+#brand img {
+  border-radius: 50%;
 }
 #exp .card {
-    border: 2px solid #dddd;
-    height: 90px;
-    padding: 10px;
+  border: 2px solid #dddd;
+  height: 90px;
+  padding: 10px;
 }
 #select .card {
-    border: 1px solid grey;
+  border: 1px solid grey;
 }
 
-#first, #second, #third, #fourth {
-    align-items: center;
+#first,
+#second,
+#third,
+#fourth {
+  align-items: center;
 }
-#first, #second, #third, #fourth:hover {
-    cursor: pointer;
+#first,
+#second,
+#third,
+#fourth:hover {
+  cursor: pointer;
 }
 #signupbody {
-    gap: 200px;
+  gap: 200px;
 }
 #loginbody {
-    gap: 200px;
+  gap: 200px;
 }
-#checkbox a{
- text-decoration: none;
- color: rgb(51, 1, 38);  
+#checkbox a {
+  text-decoration: none;
+  color: rgb(51, 1, 38);
 }
 #properties .card {
-    padding: 20px;
-    
+  padding: 20px;
 }
 #faq .card {
-    border: 1px solid rgb(56, 56, 56);
-    border-radius: 10px;
-    padding: 20px;
+  border: 1px solid rgb(56, 56, 56);
+  border-radius: 10px;
+  padding: 20px;
 }
 #reviews .card {
-    border: 1px solid rgb(56, 56, 56);
-    border-radius: 10px;
-    padding: 20px;
-    
+  border: 1px solid rgb(56, 56, 56);
+  border-radius: 10px;
+  padding: 20px;
 }
 #explore {
-    background-color: rgb(32,32,32);
-    border-radius: 10px;
+  background-color: rgb(32, 32, 32);
+  border-radius: 10px;
 }
 .button button {
-    background-color: rgb(51, 1, 38);
-    color: white;
-    width: 420px;
+  background-color: rgb(51, 1, 38);
+  color: white;
+  width: 420px;
 }
 .image img {
-    width: 72px;
-    height: 72px;
+  width: 72px;
+  height: 72px;
 }
 
 #create a {
-    text-decoration: none;
-    color: rgb(51, 1, 38);
+  text-decoration: none;
+  color: rgb(51, 1, 38);
 }
 #login a {
-    text-decoration: none;
-    color: rgb(51, 1, 38);
+  text-decoration: none;
+  color: rgb(51, 1, 38);
 }
 #login {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 .card {
-    border: none;
-    display: flex;
-    justify-content: center;
+  border: none;
+  display: flex;
+  justify-content: center;
 }
+

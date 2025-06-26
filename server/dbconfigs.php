@@ -71,11 +71,8 @@ function addAgents($agentname, $emailaddress, $password, $yearsofexp)
     $query = "INSERT INTO agents (agent_name, email_address, password, years_of_exp) VALUES ('$agentname', '$emailaddress', '$password', '$yearsofexp')";
     if ($conn->query($query) == TRUE) {
         $_SESSION['signup'] = TRUE;
-        header("Location: ../agentin.php");
     } else {
         $_SESSION['signup'] = FALSE;
-        echo "Error: " . $query . "<br>" . $conn->error;
-        header("Location: ../agentup.php");
     }
 }
 function logAgent($emailaddress, $password)
@@ -101,4 +98,17 @@ function displayProperties($houseid)
     } else {
         return false;
     }
+}
+function collectMessage($name, $email, $message) {
+    global $conn;
+
+    $message = "INSERT into messages (name, email, message) VALUES ('$name', '$email', '$message')";
+    if ($conn->query($message) === TRUE) {
+        $_SESSION['message'] = TRUE;
+        return true;
+    } else {
+        $_SESSION['message'] = FALSE;
+        return false;
+    }
+    
 }
