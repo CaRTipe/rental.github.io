@@ -34,13 +34,13 @@ $isAuthPage = in_array($currentPage, ['signin.php', 'signup.php', 'agentin.php',
                         <a class="nav-link <?= $isAuthPage ? 'text-secondary' : 'text-white' ?>" href="./index.php">Home</a>
                     </li>
                     <li class="nav-item px-lg-2">
-                        <a class="nav-link <?= $isAuthPage ? 'text-secondary' : 'text-white' ?>" href="#">About Us</a>
+                        <a class="nav-link <?= $isAuthPage ? 'text-secondary' : 'text-white' ?>" href="about.php">About Us</a>
                     </li>
                     <li class="nav-item px-lg-2">
                         <a class="nav-link <?= $isAuthPage ? 'text-secondary' : 'text-white' ?>" href="propertydetails.php">Properties</a>
                     </li>
                     <li class="nav-item px-lg-2">
-                        <a class="nav-link <?= $isAuthPage ? 'text-secondary' : 'text-white' ?>" href="#">Services</a>
+                        <a class="nav-link <?= $isAuthPage ? 'text-secondary' : 'text-white' ?>" href="services.php">Services</a>
                     </li>
                 </ul>
 
