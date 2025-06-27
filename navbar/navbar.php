@@ -3,7 +3,7 @@
 $currentPage = basename($_SERVER['PHP_SELF']);
 
 // Check if it's signin or signup page
-$isAuthPage = in_array($currentPage, ['signin.php', 'signup.php', 'agentin.php', 'agentup.php']);
+$isAuthPage = in_array($currentPage, ['index.php', 'signin.php', 'signup.php', 'agentin.php', 'agentup.php', 'about.php', 'propertydetails.php', 'services.php']);
 ?>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container d-flex align-items-center justify-content-between">
@@ -47,10 +47,10 @@ $isAuthPage = in_array($currentPage, ['signin.php', 'signup.php', 'agentin.php',
                 <!-- Login/Sign Up Buttons -->
                 <div class="mt-3 mt-lg-0 d-flex gap-2">
                     <a href="./agentin.php">
-                        <button class="btn btn-outline-light btn-sm btn-lg-outline-dark">Login</button>
+                        <button class="btn btn-outline-secondary btn-sm btn-lg-outline-dark">Login</button>
                     </a>
                     <a href="./agentup.php">
-                        <button class="btn btn-light btn-sm btn-lg-dark">Sign Up</button>
+                        <button class="btn btn-secondary btn-sm btn-lg-dark">Sign Up</button>
                     </a>
                 </div>
             </div>

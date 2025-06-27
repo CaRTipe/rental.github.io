@@ -2,7 +2,7 @@
 include "filemanager.php";
 ?>
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@ include "filemanager.php";
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+<body class="bg-white text-dark">
     <?php
     include "./navbar/navbar.php"
     ?>
@@ -20,7 +20,7 @@ include "filemanager.php";
         <div class="row align-items-center">
             <!-- Text Content -->
             <div class="col-lg-6 col-md-12 mb-4">
-                <div class="card p-4">
+                <div class="card p-4 bg-light text-dark">
                     <div class="mb-4">
                         <h1 class="mb-3">
                             Discover your Dream Property <br class="d-none d-md-block">
@@ -36,13 +36,13 @@ include "filemanager.php";
                         <button class="btn btn-secondary" style="height: 40px;">Browse Properties</button>
                     </div>
                     <div class="d-flex flex-wrap gap-3" id="exp">
-                        <div class="card p-3 text-center flex-fill">
+                        <div class="card p-3 text-center flex-fill bg-white">
                             <h1 class="h5">200+ <br> Happy Customers</h1>
                         </div>
-                        <div class="card p-3 text-center flex-fill">
+                        <div class="card p-3 text-center flex-fill bg-white">
                             <h1 class="h5">10k+ <br> Properties for Clients</h1>
                         </div>
-                        <div class="card p-3 text-center flex-fill">
+                        <div class="card p-3 text-center flex-fill bg-white">
                             <h1 class="h5">16+ <br> Years of Experience</h1>
                         </div>
                     </div>
@@ -253,7 +253,7 @@ include "filemanager.php";
     </div>
 
     <!-- Explore Section -->
-    <div class="container py-5" id="explore">
+    <div class="container py-5 bg-light text-dark" id="explore">
         <div class="row align-items-center g-4">
             <div class="col-lg-8 col-12">
                 <h1 class="h2 mb-3">Start Your Real Estate Journey Today</h1>
@@ -270,7 +270,7 @@ include "filemanager.php";
     </div>
 
     <!-- Footer Top Section -->
-    <div class="container py-5 text-white" style="background-color: rgb(32, 32, 32);" id="bfooter">
+    <div class="container py-5 bg-white text-dark" id="bfooter">
         <div class="row g-5">
             <!-- Logo and Newsletter -->
             <div class="col-md-4">
@@ -291,49 +291,49 @@ include "filemanager.php";
                     <div class="col-6 col-lg-2">
                         <h5 class="text-secondary mb-3">Home</h5>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="text-white text-decoration-none">Hero Section</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Features</a></li>
-                            <li><a href="#properties" class="text-white text-decoration-none">Properties</a></li>
-                            <li><a href="#reviews" class="text-white text-decoration-none">Testimonials</a></li>
-                            <li><a href="#faq" class="text-white text-decoration-none">FAQs</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Hero Section</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Features</a></li>
+                            <li><a href="#properties" class="text-dark text-decoration-none">Properties</a></li>
+                            <li><a href="#reviews" class="text-dark text-decoration-none">Testimonials</a></li>
+                            <li><a href="#faq" class="text-dark text-decoration-none">FAQs</a></li>
                         </ul>
                     </div>
                     <!-- About Us -->
                     <div class="col-6 col-lg-2">
                         <h5 class="text-secondary mb-3">About Us</h5>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="text-white text-decoration-none">Our Story</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Our Works</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">How it Works</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Our Team</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Our Clients</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Our Story</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Our Works</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">How it Works</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Our Team</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Our Clients</a></li>
                         </ul>
                     </div>
                     <!-- Properties -->
                     <div class="col-6 col-lg-2">
                         <h5 class="text-secondary mb-3">Properties</h5>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="text-white text-decoration-none">Portfolio</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Categories</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Portfolio</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Categories</a></li>
                         </ul>
                     </div>
                     <!-- Services -->
                     <div class="col-6 col-lg-3">
                         <h5 class="text-secondary mb-3">Services</h5>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="text-white text-decoration-none">Valuation Mastery</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Strategic Marketing</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Negotiation Wizardry</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Closing Success</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Property Management</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Valuation Mastery</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Strategic Marketing</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Negotiation Wizardry</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Closing Success</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Property Management</a></li>
                         </ul>
                     </div>
                     <!-- Contact Us -->
                     <div class="col-6 col-lg-3">
                         <h5 class="text-secondary mb-3">Contact Us</h5>
                         <ul class="list-unstyled">
-                            <li><a href="contact.php" class="text-white text-decoration-none">Contact Form</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Our Offices</a></li>
+                            <li><a href="contact.php" class="text-dark text-decoration-none">Contact Form</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Our Offices</a></li>
                         </ul>
                     </div>
                 </div>
@@ -342,11 +342,11 @@ include "filemanager.php";
     </div>
 
     <!-- Footer Bottom Section -->
-    <div class="container-fluid py-3" style="background-color: #1a1a1a;" id="footer">
-        <div class="row align-items-center text-white">
+    <div class="container-fluid py-3 bg-light text-dark" id="footer">
+        <div class="row align-items-center">
             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                 <span class="me-4">@2025 Sustainable Houses. All Rights Reserved.</span>
-                <a href="#" class="text-white text-decoration-none">Terms and Conditions</a>
+                <a href="#" class="text-dark text-decoration-none">Terms and Conditions</a>
             </div>
             <div class="col-md-6 text-center text-md-end">
                 <img src="./assets/images/facebook.png" alt="facebook" width="32" height="32" class="mx-1">
