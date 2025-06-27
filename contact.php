@@ -45,6 +45,10 @@
             </div>
         </div>
     </div>
+    <?php
+    include "./navbar/footer.php";
+    ?>
+
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>

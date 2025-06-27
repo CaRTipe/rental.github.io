@@ -88,6 +88,9 @@ if (isset($_SESSION['login']) && $_SESSION['login']) {
             <img src="./assets/images/house.png" alt="House" class="img-fluid" width="586px" style="box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
         </div>
     </div>
+    <?php
+    include "./navbar/footer.php";
+    ?>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"></script>

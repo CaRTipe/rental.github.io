@@ -21,6 +21,7 @@ include 'filemanager.php';
             echo "<div class='row g-4'>"; // gap between cards
 
             foreach ($houses as $house) {
+                $shortDesc = strlen($house['description']) > 50 ? substr($house['description'], 0, 20) . '...' : $house['description'];
                 echo "
         <div class='col-12 col-sm-6 col-lg-4'>
           <div class='card h-100 shadow'>
@@ -28,7 +29,7 @@ include 'filemanager.php';
             <div class='card-body d-flex flex-column justify-content-between'>
               <div>
                 <h4 class='card-title text-dark mb-2'>{$house['house_name']}</h4>
-                <p class='card-text text-dark mb-3'>{$house['description']} <a class='text-primary' href='#'>Read more</a></p>
+                <p class='card-text text-dark mb-3'>{$shortDesc} <a class='text-primary' href='singleproperty.php?house_id={$house['house_id']}'>Read more</a></p>
 
                 <div class='d-flex flex-wrap gap-2 mb-3'>
                   <div class='card p-2 d-flex flex-row align-items-center gap-2' style='width: 140px; background-color:rgb(77, 78, 79);'>

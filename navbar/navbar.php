@@ -3,7 +3,7 @@
 $currentPage = basename($_SERVER['PHP_SELF']);
 
 // Check if it's signin or signup page
-$isAuthPage = in_array($currentPage, ['index.php', 'signin.php', 'signup.php', 'agentin.php', 'agentup.php', 'about.php', 'propertydetails.php', 'services.php']);
+$isAuthPage = in_array($currentPage, ['index.php', 'signin.php', 'signup.php', 'agentin.php', 'agentup.php', 'about.php', 'propertydetails.php', 'services.php', 'singleproperty.php']);
 ?>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container d-flex align-items-center justify-content-between">
@@ -20,7 +20,7 @@ $isAuthPage = in_array($currentPage, ['index.php', 'signin.php', 'signup.php', '
         </button>
 
         <!-- Offcanvas Sidebar -->
-        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
+        <div class="offcanvas offcanvas-start text-light" tabindex="-1" id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
@@ -29,7 +29,7 @@ $isAuthPage = in_array($currentPage, ['index.php', 'signin.php', 'signup.php', '
             </div>
             <div class="offcanvas-body d-flex flex-column flex-lg-row align-items-lg-center justify-content-between w-100">
                 <!-- Nav links -->
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 flex-lg-row">
+                <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 flex-lg-row">
                     <li class="nav-item px-lg-2">
                         <a class="nav-link <?= $isAuthPage ? 'text-secondary' : 'text-white' ?>" href="./index.php">Home</a>
                     </li>

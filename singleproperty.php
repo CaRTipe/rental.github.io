@@ -25,7 +25,7 @@ $house = displayProperties($disp);
         <div class="row g-4">
             <!-- Property Image -->
             <div class="col-12">
-                <img src="./uploads/<?php echo $house['image']; ?>" alt="House Image" class="img-fluid rounded" />
+                <img src="./uploads/<?php echo $house['image']; ?>" alt="House Image" class="img-fluid rounded" width="1300px"/>
             </div>
 
             <!-- Property Details -->
@@ -70,6 +70,9 @@ $house = displayProperties($disp);
             </div>
         </div>
     </div>
+    <?php
+    include "./navbar/footer.php";
+    ?>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>

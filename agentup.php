@@ -93,6 +93,9 @@ include "./server/dbconfigs.php";
             <img src="./assets/images/house.png" alt="House" class="img-fluid" width="800px" style="max-width: none;">
         </div>
     </div>
+    <?php
+    include "./navbar/footer.php";
+    ?>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"></script>
