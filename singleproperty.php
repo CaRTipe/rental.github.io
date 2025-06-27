@@ -4,7 +4,7 @@ $disp = $_GET['house_id'];
 $house = displayProperties($disp);
 ?>
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-theme="light">
 
 <head>
     <meta charset="UTF-8" />
@@ -32,25 +32,25 @@ $house = displayProperties($disp);
             <div class="col-12">
                 <h2 class="h4 my-3"><?php echo $house['house_name']; ?></h2>
                 <p class="my-3">
-                    <?php echo $house['description']; ?> <a href="#">Read more</a>
+                    <?php echo $house['description']; ?> <a class='text-primary' href="singleproperty.php?house_id={$house['house_id']}">Read more</a>
                 </p>
 
                 <!-- Icons Row -->
                 <div class="row g-3 mb-4">
                     <div class="col-12 col-sm-4">
-                        <div class="card d-flex flex-row align-items-center gap-2 p-2">
+                        <div class="card d-flex flex-row align-items-center gap-2 p-2" style="background-color: rgb(77, 78, 79);">
                             <img src="./assets/images/bedroom.png" alt="bedroom" width="24" height="24" />
                             <p class="mb-0"><?php echo $house['bedroom']; ?>-bedroom</p>
                         </div>
                     </div>
                     <div class="col-12 col-sm-4">
-                        <div class="card d-flex flex-row align-items-center gap-2 p-2">
+                        <div class="card d-flex flex-row align-items-center gap-2 p-2" style="background-color: rgb(77, 78, 79);">
                             <img src="./assets/images/bathroom.png" alt="bathroom" width="24" height="24" />
                             <p class="mb-0"><?php echo $house['bathroom']; ?>-bathroom</p>
                         </div>
                     </div>
                     <div class="col-12 col-sm-4">
-                        <div class="card d-flex flex-row align-items-center gap-2 p-2">
+                        <div class="card d-flex flex-row align-items-center gap-2 p-2" style=" background-color: rgb(77, 78, 79);">
                             <img src="./assets/images/villa.png" alt="villa" width="24" height="24" />
                             <p class="mb-0">Villa</p>
                         </div>
@@ -61,7 +61,7 @@ $house = displayProperties($disp);
                 <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
                     <div>
                         <h4 class="text-muted mb-1">Price</h4>
-                        <h3 class="text-light"><?php echo $house['price']; ?></h3>
+                        <h3 class="text-dark"><?php echo $house['price']; ?></h3>
                     </div>
                     <button class="btn btn-primary px-4 py-2" style="background-color: purple; border-radius: 20px;">
                         Buy Now

@@ -114,7 +114,7 @@ include "filemanager.php";
                         <img src='./uploads/{$house['image']}' class='img-fluid' alt=''>
                         <div class='p-3'>
                             <h4>{$house['house_name']}</h4>
-                            <p>{$house['description']} <a class='text-primary' href='#'>Read more</a></p>
+                            <p>{$house['description']} <a class='text-primary' href='singleproperty.php?house_id={$house['house_id']}'>Read more</a></p>
                             <div class='d-flex flex-wrap gap-2 mb-3'>
                                 <div class='card flex-fill text-center p-2' style='background-color:rgb(77, 78, 79);'>
                                     <img src='./assets/images/bedroom.png' alt='' width='24' height='24'>
@@ -134,7 +134,7 @@ include "filemanager.php";
                                     <h6 class='text-muted mb-1'>Price</h6>
                                     <h5 class='text-secondary'>{$house['price']}</h5>
                                 </div>
-                                <a href='singleproperty.php?house_id={$house['house_id']}' class='btn btn-primary' style='background-color: purple;'>View Property Details</a>
+                                <a href='singleproperty.php?house_id={$house['house_id']}' class='btn btn-primary' style='background-color: purple;'>View Property</a>
                             </div>
                         </div>
                     </div>

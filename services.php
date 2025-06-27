@@ -67,8 +67,19 @@
         <p class="lead mb-4">
             Explore our featured video showcasing a stunning mansion built on the edge of an abandoned quarry, highlighting innovative architecture and sustainable design.
         </p>
-        <iframe style="border-radius: 20px; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 12px 58px rgba(0, 0, 0, 0.1), 0 24px 110px rgba(0, 0, 0, 0.1);" width="1204" height="677" src="https://www.youtube.com/embed/HQQCiZNCg8o" title="Inside A Mansion Built On The Edge Of An Abandoned Quarry | Unique Spaces | Architectural Digest" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 20px; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 12px 58px rgba(0, 0, 0, 0.1), 0 24px 110px rgba(0, 0, 0, 0.1);">
+            <iframe
+                src="https://www.youtube.com/embed/HQQCiZNCg8o"
+                title="Inside A Mansion Built On The Edge Of An Abandoned Quarry | Unique Spaces | Architectural Digest"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 20px;"></iframe>
+        </div>
     </div>
+
     <div class="text-center mt-5">
         <a href="contact.php" class="btn btn-primary">Contact Us for More Information</a>
     </div>
