@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
+<style>
+</style>
 
 <body>
     <?php include './navbar/navbar.php'; ?>
@@ -27,6 +29,7 @@
                         <p class="card-text">
                             Browse our curated selection of sustainable homes designed with the environment in mind, without compromising on luxury or comfort.
                         </p>
+                        <img src="" alt="">
                     </div>
                 </div>
             </div>
@@ -59,6 +62,16 @@
         </div>
     </div>
 
+    <div class="text-center my-5">
+        <h2 class="mb-4">Watch Our Unique Spaces</h2>
+        <p class="lead mb-4">
+            Explore our featured video showcasing a stunning mansion built on the edge of an abandoned quarry, highlighting innovative architecture and sustainable design.
+        </p>
+        <iframe style="border-radius: 20px; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 12px 58px rgba(0, 0, 0, 0.1), 0 24px 110px rgba(0, 0, 0, 0.1);" width="1204" height="677" src="https://www.youtube.com/embed/HQQCiZNCg8o" title="Inside A Mansion Built On The Edge Of An Abandoned Quarry | Unique Spaces | Architectural Digest" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="text-center mt-5">
+        <a href="contact.php" class="btn btn-primary">Contact Us for More Information</a>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

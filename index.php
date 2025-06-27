@@ -114,17 +114,17 @@ include "filemanager.php";
                         <img src='./uploads/{$house['image']}' class='img-fluid' alt=''>
                         <div class='p-3'>
                             <h4>{$house['house_name']}</h4>
-                            <p>{$house['description']} <a href='#'>Read more</a></p>
+                            <p>{$house['description']} <a class='text-primary' href='#'>Read more</a></p>
                             <div class='d-flex flex-wrap gap-2 mb-3'>
-                                <div class='card flex-fill text-center p-2'>
+                                <div class='card flex-fill text-center p-2' style='background-color:rgb(77, 78, 79);'>
                                     <img src='./assets/images/bedroom.png' alt='' width='24' height='24'>
                                     <p class='mb-0'>{$house['bedroom']}-bedroom</p>
                                 </div>
-                                <div class='card flex-fill text-center p-2'>
+                                <div class='card flex-fill text-center p-2' style='background-color:rgb(77, 78, 79);'>
                                     <img src='./assets/images/bathroom.png' alt='' width='24' height='24'>
                                     <p class='mb-0'>{$house['bathroom']}-bathroom</p>
                                 </div>
-                                <div class='card flex-fill text-center p-2'>
+                                <div class='card flex-fill text-center p-2' style='background-color:rgb(77, 78, 79);'>
                                     <img src='./assets/images/villa.png' alt='' width='24' height='24'>
                                     <p class='mb-0'>Villa</p>
                                 </div>
