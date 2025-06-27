@@ -32,13 +32,13 @@ $house = displayProperties($disp);
             <div class="col-12">
                 <h2 class="h4 my-3"><?php echo $house['house_name']; ?></h2>
                 <p class="my-3">
-                    <?php echo $house['description']; ?> <a class='text-primary' href="singleproperty.php?house_id={$house['house_id']}">Read more</a>
+                    <?php echo $house['description']; ?> 
                 </p>
 
                 <!-- Icons Row -->
                 <div class="row g-3 mb-4">
                     <div class="col-12 col-sm-4">
-                        <div class="card d-flex flex-row align-items-center gap-2 p-2" style="background-color: rgb(77, 78, 79);">
+                        <div class="card d-flex flex-row align-items-center justify-content-center gap-2 p-2" style="background-color: rgb(77, 78, 79);">
                             <img src="./assets/images/bedroom.png" alt="bedroom" width="24" height="24" />
                             <p class="mb-0"><?php echo $house['bedroom']; ?>-bedroom</p>
                         </div>
